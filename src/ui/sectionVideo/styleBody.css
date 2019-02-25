@@ -1,0 +1,257 @@
+
+.sec__body{
+	position: absolute;
+	width: 100%;
+	height: 1000px;
+	top :70px;
+	background: #363650;
+	overflow-x: hidden;
+}
+.sec__body__spis_one{
+	position: relative;
+	width: 100%;
+	height: 90px;
+	/*background: #fff;*/
+
+}
+.sec__body__spis_one___rec{
+	position: relative;
+	background: #fff;
+	width: 47%;
+	height: 60px;
+	border-radius: 0px 10px 10px 0px;
+	top: 30px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 25px;
+
+}
+.sec__body__spis_one___rec >a{
+	text-decoration: none;
+	color: #363650;
+	top: -54px;
+    position: relative;
+}
+.sec__body__spis_one___rec_icon_1{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/лупа.png);
+	background-repeat: no-repeat;
+    top: 7px;
+    left: 148px;
+}
+.sec__body__spis_one___rec_us{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/свернутый уголок.png);
+	background-repeat: no-repeat;
+    top: -101px;
+    left: 94%;
+    transition: 1s;
+	cursor: pointer;
+}
+.sec__body__spis_one___tra{
+	position: relative;
+	background: #fff;
+	width: 47%;
+	height: 60px;
+	left: 55%;
+	border-radius: 10px 0px 0px 10px;
+    top: -28px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 25px;
+}
+.sec__body__spis_one___tra >a{
+	text-decoration: none;
+	color: #363650;
+	top: 7px;
+    position: relative;
+}
+.sec__body__spis_one___rec_us_l{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/свернутый уголок -left.png);
+	background-repeat: no-repeat;
+    top: -42px;
+    left: 18px;
+	cursor: pointer;
+	transition:1s;
+}
+.sec__body__spis_one___rec_icon_2{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/лупа.png);
+	background-repeat: no-repeat;
+    top: 7px;
+    left: 408px;
+}
+.sec__body__spis_one___sech{
+	position: relative;
+	background: #fff;
+	width: 47%;
+	height: 60px;
+	border-radius: 0px 10px 10px 0px;
+	top: 30px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 25px;	
+}
+.sec__body__spis_one___podpis{
+	position: relative;
+	background: #fff;
+	width: 47%;
+	height: 60px;
+	left: 55%;
+	border-radius: 10px 0px 0px 10px;
+    top: -28px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 25px;
+}
+.sec__body__spis_one___rec_us_r{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/свернутый уголок.png);
+	background-repeat: no-repeat;
+	top: -42px;
+    left: 94%;
+	cursor: pointer;	
+}
+.sec__body__spis_one___podpis >a{
+	text-decoration: none;
+	color: #363650;
+	top: 7px;
+    position: relative;
+}
+.sec__body__spis_one___sech >a{
+	text-decoration: none;
+	color: #363650;
+	top: 7px;
+    position: relative;
+}
+.sec__body__spis_one___rec_icon_3{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/лупа.png);
+	background-repeat: no-repeat;
+    top: 7px;
+    left: 148px;	
+}
+.sec__body__spis_one___rec_icon_4{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/подписки.png);
+	background-repeat: no-repeat;
+    top: 7px;
+    left: 408px;	
+}
+.sec__body__spis_one___rec_icon_5{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/создать плейлист.png);
+	background-repeat: no-repeat;
+    top: 7px;
+    left: 140px;	
+}
+.sec__body__spis_one___rec_icon_6{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/видео друзей.png);
+	background-repeat: no-repeat;
+    top: 7px;
+    left: 408px;	
+}
+.sec__body__spis_one___rec_icon_7{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/посмотреть позже.png);
+	background-repeat: no-repeat;
+    top: 7px;
+    left: 140px;	
+}
+.sec__body__spis_one___rec_icon_8{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/история.png);
+	background-repeat: no-repeat;
+    top: 7px;
+    left: 408px;	
+}
+
+.sec__body__spis_one___rec_icon_9{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/избранное.png);
+	background-repeat: no-repeat;
+    top: 3px;
+    left: 144px;	
+}
+.sec__body__spis_one___rec_icon_10{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-image: url(img/свои записми.png);
+	background-repeat: no-repeat;
+    top: 3px;
+    left: 408px;	
+}
+.video__block__open{
+    display: grid;
+    position: absolute;
+    width: 200%;
+    height: 300px;
+	left: 6%;
+	transition: 1s;
+    background: red;
+    top: 63px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100px 100px 100px;
+}
+.video__block__close{
+	display: none;
+	transition: 1s;
+}
+ .sec__body__spis_one___sech{
+    top: 364px;
+}
+ .sec__body__spis_one___podpis{
+    top: 308px;
+}
+.active__icon{
+	transition: 1s;
+	transform: rotateZ(89deg);
+    top: -89px;
+    left: 89%;
+}
+.active_icon_two{
+	transition: 1s;
+	transform: rotateZ(-90deg);
+    top: -65px;
+    left: 1%;
+}
+
+.pasiv_us_strel {
+	top: -41px;
+    left: 94%;
+}
+.active_str_n{
+	 top: -29px;
+}
+/*стили для правого юзнутого
+    transform: rotateZ(89deg);
+    top: -89px;
+    left: 89%;
+    */
