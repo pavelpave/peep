@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import podgruz from "./ajaxVideo";
 // import Videoapp  from './videoPOTOCK.js';
 import './styleBody.css';
 export default class BodyVideo extends Component{
@@ -6,7 +7,7 @@ export default class BodyVideo extends Component{
 		super(props)
 		this.state = {
 			ClassNameStrel : {
-				_1:[true,0],
+				_1: [true, podgruz()[0]],
 				_2:[false,0],
 				_3:[false,0],
 				_4:[false,0],
