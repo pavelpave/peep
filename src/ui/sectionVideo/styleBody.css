@@ -49,7 +49,7 @@
 	background-repeat: no-repeat;
     top: -101px;
     left: 94%;
-    transition: 1s;
+    transition: 0.7s;
 	cursor: pointer;
 }
 .sec__body__spis_one___tra{
@@ -79,7 +79,7 @@
     top: -42px;
     left: 18px;
 	cursor: pointer;
-	transition:1s;
+	transition:0.7s;
 }
 .sec__body__spis_one___rec_icon_2{
 	position: absolute;
