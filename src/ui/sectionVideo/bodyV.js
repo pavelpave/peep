@@ -35,7 +35,7 @@ export default class BodyVideo extends Component{
 			} else if (this.state.ClassNameStrel[e.target.id][0] == false){
 		    	toggl = true
 			}
-			for (const key in this.state.ClassNameStrel[0]) {
+			for (const key in this.state.ClassNameStrel) {
 				if (this.state.ClassNameStrel[key][0] == true) {
 				keyTrue+=1
 				}
