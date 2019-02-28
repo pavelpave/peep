@@ -19,16 +19,26 @@ export default class BodyVideo extends Component{
 				_10:[false,0]
 			},
 			ClassNameBlockVideo :{
-				recomend:true
+				recomend:true,
+				translation:false,
+				serch_kanal:false,
+				podpis:false,
+				create_pl:false,
+				video_frend:false,
+				pozje:false,
+				history:false,
+				izbran:false,
+				my_post:false
 			}
 		}
 		this.usstr = this.usstr.bind(this)
 	}
-
+	grid__video__system(){
+		return 2
+	}
 	usstr(e){
-		let spis_id_srel = ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10'],
-			index        = e.target.id,
-			keyTrue      = 0,
+		let index     = e.target.id,
+			keyTrue   = 0,
 		    toggl;
 		    if (this.state.ClassNameStrel[e.target.id][0]) {
 		    	toggl = false
@@ -46,20 +56,24 @@ export default class BodyVideo extends Component{
 			 }
 		this.state.ClassNameStrel[index][0] = toggl
 		//video block
-			if (index == '_1') {
-				if ( this.state.ClassNameStrel['_1'][0] == false) {
-					this.state.ClassNameBlockVideo.recomend = false
+		for (const key in this.state.ClassNameBlockVideo) {
+			if (index) {
+				if (this.state.ClassNameStrel[index][0] == false) {
+					this.state.ClassNameBlockVideo[key] = false
 				} else if (this.state.ClassNameStrel[index][0] == true){
-					this.state.ClassNameBlockVideo.recomend = true	
+					this.state.ClassNameBlockVideo[key] = true	
 				}
 				
 			 }
-			if (this.state.ClassNameStrel['_1'][0] == false) {
+			 if (this.state.ClassNameStrel['_1'][0] == false) {
 				this.state.ClassNameBlockVideo.recomend = false
 			 }
+		}
+		
+			
 			 
-		console.log(this.state.ClassNameBlockVideo.recomend)
-		console.log(this.state.ClassNameStrel)
+		// console.log(this.state.ClassNameBlockVideo.recomend)
+		// console.log(this.state.ClassNameStrel)
 
 		this.setState(function (prevState, props) {
 				return { ClassNameStrel: this.state.ClassNameStrel,
@@ -81,7 +95,7 @@ export default class BodyVideo extends Component{
 						             onClick={this.usstr}></div> 
 
 						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{height:this.state.ClassNameStrel._1[1]}}>
-
+							{this.grid__video__system()}
 						</div>
 					</div>
 
@@ -92,6 +106,10 @@ export default class BodyVideo extends Component{
 							className={this.state.ClassNameStrel._2[0]  ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
 									onClick={this.usstr} 
 							 ></div>
+
+						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._2[1] }}>
+							{this.grid__video__system()}
+						</div>
 					</div>
 
 					<div className="sec__body__spis_one___sech">
@@ -100,6 +118,10 @@ export default class BodyVideo extends Component{
 						<div id="_3" className={this.state.ClassNameStrel._3[0]  ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}>
 							</div>
+					
+						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._3[1] }}>
+							{this.grid__video__system()}
+						</div>
 					</div>
 
 					<div className="sec__body__spis_one___podpis" >
@@ -107,6 +129,9 @@ export default class BodyVideo extends Component{
 						<a href="#">Подписки</a>
 						<div id="_4" className={this.state.ClassNameStrel._4[0]  ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
 							onClick={this.usstr}></div>
+						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._4[1] }}>
+							{this.grid__video__system()}
+						</div>
 					</div>
 
 					<div className="sec__body__spis_one___sech" >
@@ -114,6 +139,9 @@ export default class BodyVideo extends Component{
 						<a href="#">Создать плейлист</a>
 						<div id="_5" className={this.state.ClassNameStrel._5[0]  ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}></div>
+						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._5[1] }}>
+							{this.grid__video__system()}
+						</div>
 					</div>
 
 					<div className="sec__body__spis_one___podpis">
@@ -121,6 +149,9 @@ export default class BodyVideo extends Component{
 						<a href="#">Видео друзей</a>
 						<div id="_6" className={this.state.ClassNameStrel._6[0]  ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
 							onClick={this.usstr}></div>
+						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._6[1] }}>
+							{this.grid__video__system()}
+						</div>
 					</div>
 
 					<div className="sec__body__spis_one___sech">
@@ -128,6 +159,9 @@ export default class BodyVideo extends Component{
 						<a href="#">Посмотреть позже</a>
 						<div id="_7" className={this.state.ClassNameStrel._7[0]  ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}></div>
+						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._7[1] }}>
+							{this.grid__video__system()}
+						</div>
 					</div>
 
 					<div className="sec__body__spis_one___podpis">
@@ -135,6 +169,9 @@ export default class BodyVideo extends Component{
 						<a href="#">История</a>
 						<div id="_8" className={this.state.ClassNameStrel._8[0]  ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
 							onClick={this.usstr}></div>
+						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._8[1] }}>
+							{this.grid__video__system()}
+						</div>
 					</div>
 
 					<div className="sec__body__spis_one___sech">
@@ -142,6 +179,9 @@ export default class BodyVideo extends Component{
 						<a href="#">Избранные</a>
 						<div id="_9" className={this.state.ClassNameStrel._9[0]  ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}></div>
+						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._9[1] }}>
+							{this.grid__video__system()}
+						</div>
 					</div>
 
 					<div className="sec__body__spis_one___podpis">
@@ -149,6 +189,9 @@ export default class BodyVideo extends Component{
 						<a href="#">Свои записи</a>
 						<div id="_10" className={this.state.ClassNameStrel._10[0]  ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
 							onClick={this.usstr}></div>
+						<div className={this.state.ClassNameBlockVideo.recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._10[1] }}>
+							{this.grid__video__system()}
+						</div>
 					</div>
 				</div>
 			</section>

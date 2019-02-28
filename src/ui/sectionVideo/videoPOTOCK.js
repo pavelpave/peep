@@ -6,14 +6,7 @@ class Videoapp extends Component{
 		this.classNicon = this.props.classNicon
 
 	}
-	iconRotate = function(props) {
-				if(this.classNicon == "sec__body__spis_one___rec_us"){
-			return("sec__body__spis_one___rec_us active__icon") 
-		}
-		else if(this.classNicon == ""){
-			return("sec__body__spis_one___rec_us")
-		}
-	}
+
 
 }
 export default Videoapp

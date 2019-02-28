@@ -218,18 +218,18 @@
     background: red;
     top: 63px;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-rows: 250px 250px 250px;
 }
 .video__block__close{
 	display: none;
 	transition: 1s;
 }
- .sec__body__spis_one___sech{
+ /* .sec__body__spis_one___sech{
     top: 364px;
 }
  .sec__body__spis_one___podpis{
     top: 308px;
-}
+} */
 .active__icon{
 	transition: 1s;
 	transform: rotateZ(89deg);
