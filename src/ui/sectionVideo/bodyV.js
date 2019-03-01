@@ -6,6 +6,7 @@ import './styleBody.css';
 export default class BodyVideo extends Component{
 	constructor(props){
 		super(props)
+		// this.usstr = this.usstr.bind(this)
 		this.state = {
 			ClassNameStrel : {
 				_1: [true, 0 , {recomend:true}],
@@ -20,7 +21,7 @@ export default class BodyVideo extends Component{
 				_10: [false, 0, {my_post: false}]
 			}
 		}
-		this.usstr = this.usstr.bind(this)
+		// this.usstr = this.usstr.bind(this)
 	}
 	grid__video__system(){
 		return 2
@@ -86,21 +87,34 @@ export default class BodyVideo extends Component{
 		return(
 			<section className="sec__body">
 				<div className="sec__body__spis_one">
-					<Blocks_inf clasN_osn_block='sec__body__spis_one___rec'
-								style_osn_block={{top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }}
-							  clasN_vnutr_block="sec__body__spis_one___rec_icon_1"
-									 link_block="#"
-							 link_block_content="Рекомендации"
-								 id_block_strel="_1"
-							 clasN_block_srelka={this.state.ClassNameStrel._1[0] ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
-										  usstr={this.usstr} 
-							clasN_block_content={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"}
-						style_block_content_top={{ height: this.state.ClassNameStrel._1[1] }}
-							grid__video__system={this.grid__video__system}
+					<Blocks_inf 	
+								clasN_osn_block='sec__body__spis_one___rec'
+											style_osn_block={{top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }}
+											clasN_vnutr_block="sec__body__spis_one___rec_icon_1"
+													link_block="#"
+											link_block_content="Рекомендации"
+												id_block_strel="_1"
+											clasN_block_srelka={this.state.ClassNameStrel._1[0] ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
+														usstr={this.usstr} 
+										clasN_block_content={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"}
+									style_block_content_top={{ height: this.state.ClassNameStrel._1[1] }}
+										grid__video__system={this.grid__video__system}
 				 />
+					<Blocks_inf
+								  clasN_osn_block='sec__body__spis_one___tra'
+									style_osn_block={{ top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }}
+									clasN_vnutr_block="sec__body__spis_one___rec_icon_2"
+									link_block="#"
+									link_block_content="Трансляции"
+									id_block_strel="_2"
+									clasN_block_srelka={this.state.ClassNameStrel._2[0] ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
+									usstr={this.usstr} 
+									clasN_block_content={this.state.ClassNameStrel._2[2].translation ? "video__block__open" : "video__block__close"}
+									style_block_content_top={{ height: this.state.ClassNameStrel._2[1] }}
+									grid__video__system={this.grid__video__system}
+					/>
 
-
-					<div className="sec__body__spis_one___tra">
+					{/* <div className="sec__body__spis_one___tra">
 						<div className="sec__body__spis_one___rec_icon_2"></div>
 						<a href="#">Трансляции</a>
 						<div id="_2"
@@ -193,7 +207,7 @@ export default class BodyVideo extends Component{
 						<div className={this.state.ClassNameStrel._10[2].my_post ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._10[1] }}>
 							{this.grid__video__system()}
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</section>
 			)
