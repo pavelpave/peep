@@ -250,6 +250,9 @@
 .active_str_n{
 	 top: -29px;
 }
+.pasiv_block_top{
+	top: 300px;
+}
 /*стили для правого юзнутого
     transform: rotateZ(89deg);
     top: -89px;

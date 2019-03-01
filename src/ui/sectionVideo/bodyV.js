@@ -39,29 +39,25 @@ export default class BodyVideo extends Component{
 				}
 				if (keyTrue >= 1){
 				this.state.ClassNameStrel[key][0] = false
+					for (const keys in this.state.ClassNameStrel[key][2]) {
+						this.state.ClassNameStrel[key][2][keys] = false
+					}
 				}
 				
 			 }
 		this.state.ClassNameStrel[index][0] = toggl
 		//video block
-	
-		
-			// if (index == ) {
-			// 	if (this.state.ClassNameStrel[index][0] == false) {
-			// 		this.state.[index][2][key] = false
-			// 	} else if (this.state.ClassNameStrel[index][0] == true) {
-			// 		this.state.[index][2][key] = true
-			// 	}
-
-			// }
-			// if (this.state.ClassNameStrel['_1'][0] == false) {
-			// 	this.state.ClassNameStrel[index][2].recomend = false
-			// }
-		
 			
-			 
-		
-
+		for (const keyTo in this.state.ClassNameStrel[index][2]) {
+			 if (index) {
+				 if (this.state.ClassNameStrel[index][0] == false) {
+					 this.state.ClassNameStrel[index][2][keyTo] = false
+				 }else if (this.state.ClassNameStrel[index][0] == true){
+					 this.state.ClassNameStrel[index][2][keyTo] = true
+				 }
+			 }
+		}
+		console.log(e)
 		this.setState(function (prevState, props) {
 				return { 
 					ClassNameStrel: this.state.ClassNameStrel
@@ -70,17 +66,28 @@ export default class BodyVideo extends Component{
 		e.stopPropagation()
 	}
 	test(){
-		console.log(this.state.ClassNameStrel._10[2].my_post)
+		console.log('sda')
+	}
+	funSwapMath(s){
+		console.log(s);
+		// for (const key in this.state.ClassNameStrel) {
+		// 	if (s == this.state.ClassNameStrel[key][0]) {
+		// 		console.log(this.state.ClassNameStrel[key][0]);
+		// 		return podgruz()
+		// 	}else{
+		// 		return podgruz()
+		// 	}
+		// }
 	}
 	render(){
 		return(
 			<section className="sec__body">
 				<div className="sec__body__spis_one">
 
-					<div className="sec__body__spis_one___rec"  >
+					<div className='sec__body__spis_one___rec' style={{top:this.funSwapMath(this.state.ClassNameStrel._1[0])}} >
 						<div className="sec__body__spis_one___rec_icon_1"></div>
 						<a href="#">Рекомендации</a>
-						<div id="_1" className={this.state.ClassNameStrel._1[0] == true ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
+						<div id="_1" className={this.state.ClassNameStrel._1[0]  ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
 							onClick={this.usstr}></div>
 
 						<div className={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._1[1] }}>
