@@ -1,5 +1,6 @@
 import React , {Component} from 'react';
 import podgruz from "./ajaxVideo";
+import Blocks_inf from "./blocks_10";
 // import Videoapp  from './videoPOTOCK.js';
 import './styleBody.css';
 export default class BodyVideo extends Component{
@@ -7,7 +8,7 @@ export default class BodyVideo extends Component{
 		super(props)
 		this.state = {
 			ClassNameStrel : {
-				_1: [true, podgruz()[0] , {recomend:true}],
+				_1: [true, 0 , {recomend:true}],
 				_2: [false, 0, {translation:false}],
 				_3: [false, 0, {serch_kanal:false}],
 				_4: [false, 0, {podpis:false}],
@@ -25,6 +26,8 @@ export default class BodyVideo extends Component{
 		return 2
 	}
 	usstr(e){
+		console.log(e);
+		
 		let index     = e.target.id,
 			keyTrue   = 0,
 		    toggl;
@@ -57,7 +60,7 @@ export default class BodyVideo extends Component{
 				 }
 			 }
 		}
-		console.log(e)
+		console.log(e.target.id)
 		this.setState(function (prevState, props) {
 				return { 
 					ClassNameStrel: this.state.ClassNameStrel
@@ -66,10 +69,10 @@ export default class BodyVideo extends Component{
 		e.stopPropagation()
 	}
 	test(){
-		console.log('sda')
+		// console.log('sda')
 	}
 	funSwapMath(s){
-		console.log(s);
+		// console.log(s);
 		// for (const key in this.state.ClassNameStrel) {
 		// 	if (s == this.state.ClassNameStrel[key][0]) {
 		// 		console.log(this.state.ClassNameStrel[key][0]);
@@ -83,17 +86,19 @@ export default class BodyVideo extends Component{
 		return(
 			<section className="sec__body">
 				<div className="sec__body__spis_one">
+					<Blocks_inf clasN_osn_block='sec__body__spis_one___rec'
+								style_osn_block={{top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }}
+							  clasN_vnutr_block="sec__body__spis_one___rec_icon_1"
+									 link_block="#"
+							 link_block_content="Рекомендации"
+								 id_block_strel="_1"
+							 clasN_block_srelka={this.state.ClassNameStrel._1[0] ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
+										  usstr={this.usstr} 
+							clasN_block_content={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"}
+						style_block_content_top={{ height: this.state.ClassNameStrel._1[1] }}
+							grid__video__system={this.grid__video__system}
+				 />
 
-					<div className='sec__body__spis_one___rec' style={{top:this.funSwapMath(this.state.ClassNameStrel._1[0])}} >
-						<div className="sec__body__spis_one___rec_icon_1"></div>
-						<a href="#">Рекомендации</a>
-						<div id="_1" className={this.state.ClassNameStrel._1[0]  ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
-							onClick={this.usstr}></div>
-
-						<div className={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._1[1] }}>
-							{this.grid__video__system()}
-						</div>
-					</div>
 
 					<div className="sec__body__spis_one___tra">
 						<div className="sec__body__spis_one___rec_icon_2"></div>
