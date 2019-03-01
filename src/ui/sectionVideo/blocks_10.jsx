@@ -6,6 +6,7 @@ class Blocks_inf extends Component {
         super(props)
         this.usstr = this.usstr.bind(this)
         //обертка
+        this.state = this.props.state
         this.clasN_osn_block = this.props.clasN_osn_block
         this.style_osn_block = this.props.style_osn_block
         //внутрений блок
@@ -14,54 +15,54 @@ class Blocks_inf extends Component {
         this.link_block_content      = this.props.link_block_content
         this.id_block_strel          = this.props.id_block_strel
         this.clasN_block_srelka      = this.props.clasN_block_srelka
-        this.usstr                   = this.props.usstr 
+        // this.usstr                   = this.props.usstr 
         this.clasN_block_content     = this.props.clasN_block_content
         this.style_block_content_top = this.props.style_block_content_top
         this.grid__video__system     = this.props.grid__video__system
     }
-    usstr(e) {
-        console.log(e);
+    usstr(e){
+		console.log(e);
 
-        let index = e.target.id,
-            keyTrue = 0,
-            toggl;
-        if (this.state.ClassNameStrel[index][0]) {
-            toggl = false
-        } else if (this.state.ClassNameStrel[index][0] == false) {
-            toggl = true
-        }
-        for (const key in this.state.ClassNameStrel) {
-            if (this.state.ClassNameStrel[key][0] == true) {
-                keyTrue += 1
-            }
-            if (keyTrue >= 1) {
-                this.state.ClassNameStrel[key][0] = false
-                for (const keys in this.state.ClassNameStrel[key][2]) {
-                    this.state.ClassNameStrel[key][2][keys] = false
-                }
-            }
+		let index     = e.target.id,
+			keyTrue   = 0,
+		    toggl;
+		    if (this.state.ClassNameStrel[index][0]) {
+		    	toggl = false
+			} else if (this.state.ClassNameStrel[index][0] == false){
+		    	toggl = true
+			}
+			for (const key in this.state.ClassNameStrel) {
+				if (this.state.ClassNameStrel[key][0] == true) {
+				keyTrue+=1
+				}
+				if (keyTrue >= 1){
+				this.state.ClassNameStrel[key][0] = false
+					for (const keys in this.state.ClassNameStrel[key][2]) {
+						this.state.ClassNameStrel[key][2][keys] = false
+					}
+				}
 
-        }
-        this.state.ClassNameStrel[index][0] = toggl
-        //video block
+			 }
+		this.state.ClassNameStrel[index][0] = toggl
+		//video block
 
-        for (const keyTo in this.state.ClassNameStrel[index][2]) {
-            if (index) {
-                if (this.state.ClassNameStrel[index][0] == false) {
-                    this.state.ClassNameStrel[index][2][keyTo] = false
-                } else if (this.state.ClassNameStrel[index][0] == true) {
-                    this.state.ClassNameStrel[index][2][keyTo] = true
-                }
-            }
-        }
-        console.log(e.target.id)
-        this.setState(function (prevState, props) {
-            return {
-                ClassNameStrel: this.state.ClassNameStrel
-            }
-        });
-        e.stopPropagation()
-    }
+		for (const keyTo in this.state.ClassNameStrel[index][2]) {
+			 if (index) {
+				 if (this.state.ClassNameStrel[index][0] == false) {
+					 this.state.ClassNameStrel[index][2][keyTo] = false
+				 }else if (this.state.ClassNameStrel[index][0] == true){
+					 this.state.ClassNameStrel[index][2][keyTo] = true
+				 }
+			 }
+		}
+		console.log(e.target.id)
+		this.setState(function (prevState, props) {
+				return { 
+					ClassNameStrel: this.state.ClassNameStrel
+				}
+		});
+		e.stopPropagation()
+	}
     render(){
         return(
             <div className={this.clasN_osn_block} style={this.style_osn_block} >
