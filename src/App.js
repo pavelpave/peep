@@ -4,12 +4,13 @@ import './App.css';
 import Heder from './ui/heder/heder.js';
 import BodyVideo from './ui/sectionVideo/bodyV.js'
 class App extends Component {
+
   render() {
     return (
     	<div>
     	
-       		 <Heder />
-       		 <BodyVideo />
+       	<Heder />
+        <BodyVideo state={this.state} />
         </div>
     );
   }

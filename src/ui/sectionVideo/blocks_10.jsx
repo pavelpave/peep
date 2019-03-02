@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 class Blocks_inf extends Component {
     constructor(props){
         super(props)
-        this.usstr = this.usstr.bind(this)
+		this.usstr = this.usstr.bind(this)
+		this.test = this.props.test
         //обертка
         this.state = this.props.state
         this.clasN_osn_block = this.props.clasN_osn_block
@@ -56,11 +57,13 @@ class Blocks_inf extends Component {
 			 }
 		}
 		console.log(e.target.id)
-		this.setState(function (prevState, props) {
-				return { 
-					ClassNameStrel: this.state.ClassNameStrel
-				}
-		});
+		this.test(this.state.ClassNameStrel)
+		// this.setState({ ClassNameStrel: this.state.ClassNameStrel})
+		// this.setState(function (prevState, props) {
+		// 		return { 
+		// 			ClassNameStrel: this.state.ClassNameStrel
+		// 		}
+		// });
 		e.stopPropagation()
 	}
     render(){
