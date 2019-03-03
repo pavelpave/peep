@@ -26,7 +26,8 @@ class Blocks_inf extends Component {
 
 		let index     = e.target.id,
 			keyTrue   = 0,
-		    toggl;
+			toggl,
+			prevState = this.state
 		    if (this.state.ClassNameStrel[index][0]) {
 		    	toggl = false
 			} else if (this.state.ClassNameStrel[index][0] == false){
@@ -57,14 +58,15 @@ class Blocks_inf extends Component {
 			 }
 		}
 		console.log(e.target.id)
-		this.test(this.state.ClassNameStrel)
+		this.test(this.state.ClassNameStrel, prevState)
 		// this.setState({ ClassNameStrel: this.state.ClassNameStrel})
 		// this.setState(function (prevState, props) {
 		// 		return { 
 		// 			ClassNameStrel: this.state.ClassNameStrel
 		// 		}
 		// });
-		e.stopPropagation()
+		// e.stopPropagation()
+		
 	}
     render(){
         return(

@@ -7,7 +7,7 @@ export default class BodyVideo extends Component{
 	constructor(props){
 		super(props)
 		
-		this.test = this.test.bind(this)
+		this.ObnState = this.ObnState.bind(this)
 		this.state = {
 			ClassNameStrel : {
 				_1: [true, 0 , {recomend:true}],
@@ -22,60 +22,58 @@ export default class BodyVideo extends Component{
 				_10: [false, 0, {my_post: false}]
 			}
 		}
-		// this.usstr = this.usstr.bind(this)
+		this.usstr = this.usstr.bind(this)
 	}
 	grid__video__system(){
 		return 2
 	}
-	// usstr(e){
-	// 	console.log(e);
+	usstr(e){
+		console.log(e);
 		
-	// 	let index     = e.target.id,
-	// 		keyTrue   = 0,
-	// 	    toggl;
-	// 	    if (this.state.ClassNameStrel[index][0]) {
-	// 	    	toggl = false
-	// 		} else if (this.state.ClassNameStrel[index][0] == false){
-	// 	    	toggl = true
-	// 		}
-	// 		for (const key in this.state.ClassNameStrel) {
-	// 			if (this.state.ClassNameStrel[key][0] == true) {
-	// 			keyTrue+=1
-	// 			}
-	// 			if (keyTrue >= 1){
-	// 			this.state.ClassNameStrel[key][0] = false
-	// 				for (const keys in this.state.ClassNameStrel[key][2]) {
-	// 					this.state.ClassNameStrel[key][2][keys] = false
-	// 				}
-	// 			}
-				
-	// 		 }
-	// 	this.state.ClassNameStrel[index][0] = toggl
-	// 	//video block
-			
-	// 	for (const keyTo in this.state.ClassNameStrel[index][2]) {
-	// 		 if (index) {
-	// 			 if (this.state.ClassNameStrel[index][0] == false) {
-	// 				 this.state.ClassNameStrel[index][2][keyTo] = false
-	// 			 }else if (this.state.ClassNameStrel[index][0] == true){
-	// 				 this.state.ClassNameStrel[index][2][keyTo] = true
-	// 			 }
-	// 		 }
-	// 	}
-	// 	console.log(e.target.id)
-	// 	this.setState(function (prevState, props) {
-	// 			return { 
-	// 				ClassNameStrel: this.state.ClassNameStrel
-	// 			}
-	// 	});
-	// 	e.stopPropagation()
-	// }
-	test(newState){
-		this.setState(function (prevState, props) {
-			return {
-				ClassNameStrel: newState
+		let index     = e.target.id,
+			keyTrue   = 0,
+		    toggl;
+		    if (this.state.ClassNameStrel[index][0]) {
+		    	toggl = false
+			} else if (this.state.ClassNameStrel[index][0] == false){
+		    	toggl = true
 			}
-		})
+			for (const key in this.state.ClassNameStrel) {
+				if (this.state.ClassNameStrel[key][0] == true) {
+				keyTrue+=1
+				}
+				if (keyTrue >= 1){
+				this.state.ClassNameStrel[key][0] = false
+					for (const keys in this.state.ClassNameStrel[key][2]) {
+						this.state.ClassNameStrel[key][2][keys] = false
+					}
+				}
+				
+			 }
+		this.state.ClassNameStrel[index][0] = toggl
+		//video block
+			
+		for (const keyTo in this.state.ClassNameStrel[index][2]) {
+			 if (index) {
+				 if (this.state.ClassNameStrel[index][0] == false) {
+					 this.state.ClassNameStrel[index][2][keyTo] = false
+				 }else if (this.state.ClassNameStrel[index][0] == true){
+					 this.state.ClassNameStrel[index][2][keyTo] = true
+				 }
+			 }
+		}
+		console.log(e.target.id)
+		// this.setState(function (prevState, props) {
+		// 		return { 
+		// 			ClassNameStrel: this.state.ClassNameStrel
+		// 		}
+		// });
+		this.ObnState(this.state.ClassNameStrel, this.state.ClassNameStrel)
+		e.stopPropagation()
+	}
+
+	ObnState(newState,prevState){
+		this.setState(prevState = newState)
 	}
 	funSwapMath(s){
 		// console.log(s);
@@ -92,34 +90,8 @@ export default class BodyVideo extends Component{
 		return(
 			<section className="sec__body">
 				<div className="sec__body__spis_one">
-					<Blocks_inf 	
-							state = {this.state}
-							clasN_osn_block='sec__body__spis_one___rec'
-							style_osn_block={{top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }}
-							clasN_vnutr_block="sec__body__spis_one___rec_icon_1"
-							link_block="#"
-							link_block_content="Рекомендации"
-							id_block_strel="_1"
-							clasN_block_srelka={this.state.ClassNameStrel._1[0] ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
-							test={this.test} 
-							clasN_block_content={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"}
-							style_block_content_top={{ height: this.state.ClassNameStrel._1[1] }}
-							grid__video__system={this.grid__video__system}
-				 />
-					{/* <Blocks_inf
-									clasN_osn_block='sec__body__spis_one___tra'
-									style_osn_block={{ top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }}
-									clasN_vnutr_block="sec__body__spis_one___rec_icon_2"
-									link_block="#"
-									link_block_content="Трансляции"
-									id_block_strel="_2"
-									clasN_block_srelka={this.state.ClassNameStrel._2[0] ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
-									usstr={this.usstr} 
-									clasN_block_content={this.state.ClassNameStrel._2[2].translation ? "video__block__open" : "video__block__close"}
-									style_block_content_top={{ height: this.state.ClassNameStrel._2[1] }}
-									grid__video__system={this.grid__video__system}
-					/> */}
-					{/* <div className='sec__body__spis_one___rec' style={{ top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }} >
+				
+					<div className='sec__body__spis_one___rec' style={{ top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }} >
 						<div className="sec__body__spis_one___rec_icon_1"></div>
 						<a href="#">Рекомендации</a>
 						<div id="_1" className={this.state.ClassNameStrel._1[0] ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
@@ -128,7 +100,7 @@ export default class BodyVideo extends Component{
 						<div className={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._1[1] }}>
 							{this.grid__video__system()}
 						</div>
-					</div> */}
+					</div>
 					<div className="sec__body__spis_one___tra">
 						<div className="sec__body__spis_one___rec_icon_2"></div>
 						<a href="#">Трансляции</a>
