@@ -10,8 +10,8 @@ export default class BodyVideo extends Component{
 		this.ObnState = this.ObnState.bind(this)
 		this.state = {
 			ClassNameStrel : {
-				_1: [true, podgruz()[0] , {recomend:true} , 1],
-				_2: [false, podgruz()[0], {translation:false} , 1],
+				_1: [true, podgruz()[0], { recomend: true }, 1, { deFTop: '30px'}],
+				_2: [false, podgruz()[0], { translation: false }, 1, { deFTop: '30px' }],
 				_3: [false, podgruz()[0], {serch_kanal:false} , 2],
 				_4: [false, podgruz()[0], {podpis:false} , 2],
 				_5: [false, podgruz()[0], {create_pl:false} , 3],
@@ -32,7 +32,7 @@ export default class BodyVideo extends Component{
 		// }
 	}
 	usstr(e){
-		// console.log(e);
+		// console.log(e.target.id);
 		
 		let index     = e.target.id,
 			keyTrue   = 0,
@@ -72,6 +72,7 @@ export default class BodyVideo extends Component{
 		// 			ClassNameStrel: this.state.ClassNameStrel
 		// 		}
 		// });
+		this.funSwapMath(e.target.id)
 		this.ObnState(this.state.ClassNameStrel, this.state.ClassNameStrel)
 		e.stopPropagation()
 	}
@@ -81,37 +82,24 @@ export default class BodyVideo extends Component{
 	}
 	funSwapMath(s){
 		console.log(s);
-		// for (const key in this.state.ClassNameStrel) {
-		// 	if (s[0] == this.state.ClassNameStrel[key][0]) {
-		// 		return
-				
-		// 	} else if (this.state.ClassNameStrel[key][3] == s[3]){
-		// 		return 
-		// 	}else{
-		// 		return podgruz()[0]
-		// 	}
-			
-		// }
-		for (const key in this.state.ClassNameStrel) {
-			if (s[0] == this.state.ClassNameStrel[key][0] && this.state.ClassNameStrel[key][3] == s[3]) {
-				return
-			}else{
-				return podgruz()
+		if (s){
+			for (const key in this.state.ClassNameStrel) {
+				if (this.state.ClassNameStrel[key] != this.state.ClassNameStrel[s] ) {
+		
+					return podgruz()
+				}
 			}
-			// if (this.state.ClassNameStrel[key][3] == s[3]) {
-			// 	return
-			// }else{
-			// 	return podgruz()
-			// }
 			
 		}
+
+	
 	}
 	render(){
 		return(
 			<section className="sec__body">
 				<div className="sec__body__spis_one">
 				
-					<div className='sec__body__spis_one___rec' style={{ top: this.funSwapMath('_1') }} >
+					<div className='sec__body__spis_one___rec' style={{ top: this.funSwapMath['_1'] , top :  }} >
 						<div className="sec__body__spis_one___rec_icon_1"></div>
 						<a href="#">Рекомендации</a>
 						<div id="_1" className={this.state.ClassNameStrel._1[0] ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
@@ -123,7 +111,7 @@ export default class BodyVideo extends Component{
 					</div>
 
 
-					<div className="sec__body__spis_one___tra" style={{ top: this.funSwapMath(this.state.ClassNameStrel._2) }}>
+					<div className="sec__body__spis_one___tra" style={{ top: this.funSwapMath['_2'] }}>
 						<div className="sec__body__spis_one___rec_icon_2"></div>
 						<a href="#">Трансляции</a>
 						<div id="_2"
@@ -136,7 +124,7 @@ export default class BodyVideo extends Component{
 						</div>
 					</div>
 
-					<div className="sec__body__spis_one___sech" style={{ top: this.funSwapMath(this.state.ClassNameStrel._3) }}>
+					<div className="sec__body__spis_one___sech" style={{ top: this.funSwapMath['_3'] }}>
 						<div className="sec__body__spis_one___rec_icon_3"></div>
 						<a href="#">Найти канал</a>
 						<div id="_3" className={this.state.ClassNameStrel._3[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
@@ -148,7 +136,7 @@ export default class BodyVideo extends Component{
 						</div>
 					</div>
 
-					<div className="sec__body__spis_one___podpis" style={{ top: this.funSwapMath(this.state.ClassNameStrel._4) }}>
+					<div className="sec__body__spis_one___podpis" style={{ top: this.funSwapMath['_4'] }}>
 						<div className="sec__body__spis_one___rec_icon_4"></div>
 						<a href="#">Подписки</a>
 						<div id="_4" className={this.state.ClassNameStrel._4[0] ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
@@ -158,7 +146,7 @@ export default class BodyVideo extends Component{
 						</div>
 					</div>
 
-					<div className="sec__body__spis_one___sech" style={{ top: this.funSwapMath(this.state.ClassNameStrel._5) }}>
+					<div className="sec__body__spis_one___sech" style={{ top: this.funSwapMath['_5'] }}>
 						<div className="sec__body__spis_one___rec_icon_5"></div>
 						<a href="#">Создать плейлист</a>
 						<div id="_5" className={this.state.ClassNameStrel._5[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
@@ -168,7 +156,7 @@ export default class BodyVideo extends Component{
 						</div>
 					</div>
 
-					<div className="sec__body__spis_one___podpis" style={{ top: this.funSwapMath(this.state.ClassNameStrel._6) }}>
+					<div className="sec__body__spis_one___podpis" style={{ top: this.funSwapMath['_6'] }}>
 						<div className="sec__body__spis_one___rec_icon_6"></div>
 						<a href="#">Видео друзей</a>
 						<div id="_6" className={this.state.ClassNameStrel._6[0] ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
@@ -178,7 +166,7 @@ export default class BodyVideo extends Component{
 						</div>
 					</div>
 
-					<div className="sec__body__spis_one___sech" style={{ top: this.funSwapMath(this.state.ClassNameStrel._7) }}>
+					<div className="sec__body__spis_one___sech" style={{ top: this.funSwapMath['_7'] }}>
 						<div className="sec__body__spis_one___rec_icon_7"></div>
 						<a href="#">Посмотреть позже</a>
 						<div id="_7" className={this.state.ClassNameStrel._7[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
@@ -188,7 +176,7 @@ export default class BodyVideo extends Component{
 						</div>
 					</div>
 
-					<div className="sec__body__spis_one___podpis" style={{ top: this.funSwapMath(this.state.ClassNameStrel._8) }}>
+					<div className="sec__body__spis_one___podpis" style={{ top: this.funSwapMath['_8'] }}>
 						<div className="sec__body__spis_one___rec_icon_8"></div>
 						<a href="#">История</a>
 						<div id="_8" className={this.state.ClassNameStrel._8[0] ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
@@ -198,7 +186,7 @@ export default class BodyVideo extends Component{
 						</div>
 					</div>
 
-					<div className="sec__body__spis_one___sech" style={{ top: this.funSwapMath(this.state.ClassNameStrel._9) }}>
+					<div className="sec__body__spis_one___sech" style={{ top: this.funSwapMath['_9'] }}>
 						<div className="sec__body__spis_one___rec_icon_9"></div>
 						<a href="#">Избранные</a>
 						<div id="_9" className={this.state.ClassNameStrel._9[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
@@ -208,7 +196,7 @@ export default class BodyVideo extends Component{
 						</div>
 					</div>
 
-					<div className="sec__body__spis_one___podpis" style={{ top: this.funSwapMath(this.state.ClassNameStrel._10) }}>
+					<div className="sec__body__spis_one___podpis" style={{ top: this.funSwapMath['_10'] }}>
 						<div className="sec__body__spis_one___rec_icon_10"></div>
 						<a href="#">Свои записи</a>
 						<div id="_10" className={this.state.ClassNameStrel._10[0] ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}

@@ -6,7 +6,7 @@
 	top :70px;
 	z-index: 1;
 	background: #363650;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 .sec__body__spis_one{
 	position: relative;
@@ -220,6 +220,7 @@ z-index: 100;
     background: #fff;
     top: 76px;
 	border-radius: 10px;
+	overflow: hidden;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 250px 250px 250px;
 }
@@ -232,7 +233,8 @@ z-index: 100;
 		z-index: 10;
 	transition: 1s;
     background: #fff;
-    top: 76px;
+	top: 76px;
+	overflow: hidden;
 	border-radius: 10px;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 250px 250px 250px;
