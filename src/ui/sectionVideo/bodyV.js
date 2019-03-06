@@ -12,14 +12,14 @@ export default class BodyVideo extends Component{
 			ClassNameStrel : {
 				_1: [true, podgruz()[0] , {recomend:true} , 1],
 				_2: [false, podgruz()[0], {translation:false} , 1],
-				_3: [false, 0, {serch_kanal:false} , 2],
-				_4: [false, 0, {podpis:false} , 2],
-				_5: [false, 0, {create_pl:false} , 3],
-				_6: [false, 0, {video_frend:false} , 3],
-				_7: [false, 0, {pozje:false} , 4],
-				_8: [false, 0, {history:false} , 4],
-				_9: [false, 0, {izbran:false} , 5],
-				_10: [false, 0, {my_post: false} , 5]
+				_3: [false, podgruz()[0], {serch_kanal:false} , 2],
+				_4: [false, podgruz()[0], {podpis:false} , 2],
+				_5: [false, podgruz()[0], {create_pl:false} , 3],
+				_6: [false, podgruz()[0], {video_frend:false} , 3],
+				_7: [false, podgruz()[0], {pozje:false} , 4],
+				_8: [false, podgruz()[0], {history:false} , 4],
+				_9: [false, podgruz()[0], {izbran:false} , 5],
+				_10: [false, podgruz()[0], {my_post: false} , 5]
 			}
 		}
 		this.usstr = this.usstr.bind(this)
@@ -81,15 +81,28 @@ export default class BodyVideo extends Component{
 	}
 	funSwapMath(s){
 		console.log(s);
-		for (const key in this.state.ClassNameStrel) {
-			if (s[0] == this.state.ClassNameStrel[key][0]) {
-				return
+		// for (const key in this.state.ClassNameStrel) {
+		// 	if (s[0] == this.state.ClassNameStrel[key][0]) {
+		// 		return
 				
-			} else if (this.state.ClassNameStrel[key][3] == s[3]){
-				return 
+		// 	} else if (this.state.ClassNameStrel[key][3] == s[3]){
+		// 		return 
+		// 	}else{
+		// 		return podgruz()[0]
+		// 	}
+			
+		// }
+		for (const key in this.state.ClassNameStrel) {
+			if (s[0] == this.state.ClassNameStrel[key][0] && this.state.ClassNameStrel[key][3] == s[3]) {
+				return
 			}else{
-				return podgruz()[0]
+				return podgruz()
 			}
+			// if (this.state.ClassNameStrel[key][3] == s[3]) {
+			// 	return
+			// }else{
+			// 	return podgruz()
+			// }
 			
 		}
 	}
