@@ -2,7 +2,7 @@
 .sec__body{
 	position: absolute;
 	width: 100%;
-	height: 1000px;
+	height: 2000px;
 	top :70px;
 	z-index: 1;
 	background: #363650;
@@ -97,7 +97,7 @@ z-index: 100;
 	width: 47%;
 	height: 60px;
 	border-radius: 0px 10px 10px 0px;
-	top: 30px;
+	top: 795px;
 	text-align: center;
 	line-height: 50px;
 	font-size: 25px;	
