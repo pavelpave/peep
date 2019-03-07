@@ -81,13 +81,26 @@ export default class BodyVideo extends Component{
 			for (const key in this.state.ClassNameStrel) {
 				if (this.state.ClassNameStrel[key] != this.state.ClassNameStrel[s] ) {
 					if (this.state.ClassNameStrel[s][3] == this.state.ClassNameStrel[key][3]) {
-						if (this.state.ClassNameStrel[s][3] <= this.state.ClassNameStrel[key][3]) {
-								console.log('qwe');
+						if (this.state.ClassNameStrel[s][3] < this.state.ClassNameStrel[key][3]) {
+							this.state.ClassNameStrel[key][4].deFTop = '33px'
 								
 						}
 
 					}else{
-						this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0] +10)
+						if (key == '_2') {
+							this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0]  -59)
+						} else if (key == '_4') {
+							this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0]  -59)
+						} else if (key == '_6') {
+							this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0]  -59)
+						} else if (key == '_8') {
+							this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0]  -59)
+						} else if (key == '_10') {
+							this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0]  -59)
+						} else {
+							this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0])
+						}
+					//	this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0] +10)
 					}
 					
 				}
