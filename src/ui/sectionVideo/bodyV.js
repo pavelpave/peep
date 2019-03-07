@@ -77,21 +77,20 @@ export default class BodyVideo extends Component{
 		this.setState(prevState = newState)
 	}
 	funSwapMath(s){
-		let saveState = this.state.ClassNameStrel
 		if (this.state.ClassNameStrel[s][0]){
 			
 			for (const key in this.state.ClassNameStrel) {
 				if (this.state.ClassNameStrel[s][3] == this.state.ClassNameStrel[key][3]) {
 					this.state.ClassNameStrel[s][4].deFTop = this.state.ClassNameStrel[s][4].Top
-					if (this.state.ClassNameStrel[s][3] >= this.state.ClassNameStrel[key][3]) {
-						this.state.ClassNameStrel[key][4].deFTop = this.state.ClassNameStrel[key][4].Top
-					}
+					
 				}
 				if (this.state.ClassNameStrel[key] != this.state.ClassNameStrel[s] ) {
 					if (this.state.ClassNameStrel[s][3] !== this.state.ClassNameStrel[key][3]) {
-						if (this.state.ClassNameStrel[s][3] >= this.state.ClassNameStrel[key][3]) {
-							this.state.ClassNameStrel[key][4].deFTop = this.state.ClassNameStrel[key][4].Top
-						}
+						// if (this.state.ClassNameStrel[s][3] >= this.state.ClassNameStrel[key][3]) {
+						// 	this.state.ClassNameStrel[key][4].deFTop = this.state.ClassNameStrel[key][4].Top
+						// }
+						
+						//сброс в низ для правого края
 						if (key == '_2') {
 							this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0] - 59)
 						} else if (key == '_4') {
@@ -104,6 +103,14 @@ export default class BodyVideo extends Component{
 							this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0] - 59)
 						} else {
 							this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0])
+						}
+						if (this.state.ClassNameStrel[s][3] > 2) {
+							this.state.ClassNameStrel['_3'][4].deFTop = '30px'
+							this.state.ClassNameStrel['_4'][4].deFTop = '-27px'
+						}
+						if (this.state.ClassNameStrel[s][3] > 3) {
+							this.state.ClassNameStrel['_5'][4].deFTop = '30px'
+							this.state.ClassNameStrel['_6'][4].deFTop = '-27px'
 						}
 						
 				}
