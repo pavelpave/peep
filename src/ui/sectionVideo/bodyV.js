@@ -80,15 +80,30 @@ export default class BodyVideo extends Component{
 		if (this.state.ClassNameStrel[s][0]){
 			for (const key in this.state.ClassNameStrel) {
 				if (this.state.ClassNameStrel[key] != this.state.ClassNameStrel[s] ) {
-		
-					this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0] +50)
+					if (this.state.ClassNameStrel[s]) {
+						
+					}
+					this.state.ClassNameStrel[key][4].deFTop = (podgruz()[0] +100)
 				}
 			}		
 		}else{
 			for (const key in this.state.ClassNameStrel) {
 				if (this.state.ClassNameStrel[key] != this.state.ClassNameStrel[s]) {
-
-					this.state.ClassNameStrel[key][4].deFTop = '33px'
+					if (key == '_2') {
+						this.state.ClassNameStrel[key][4].deFTop = '-28px'
+					}else if(key == '_4'){
+						this.state.ClassNameStrel[key][4].deFTop = '-28px'
+					} else if (key == '_6') {
+						this.state.ClassNameStrel[key][4].deFTop = '-28px'
+					} else if (key == '_8') {
+						this.state.ClassNameStrel[key][4].deFTop = '-28px'
+					} else if (key == '_10') {
+						this.state.ClassNameStrel[key][4].deFTop = '-28px'
+					}else{
+						this.state.ClassNameStrel[key][4].deFTop = '30px'
+					}
+					
+						
 				}
 			}
 		}
@@ -100,7 +115,7 @@ export default class BodyVideo extends Component{
 			<section className="sec__body">
 				<div className="sec__body__spis_one">
 				
-					<div className='sec__body__spis_one___rec' style={{  top : this.state.ClassNameStrel._1[4].deFTop }} >
+					<div className='sec__body__spis_one___rec' style={{  }} >
 						<div className="sec__body__spis_one___rec_icon_1"></div>
 						<a href="#">Рекомендации</a>
 						<div id="_1" className={this.state.ClassNameStrel._1[0] ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
@@ -112,7 +127,7 @@ export default class BodyVideo extends Component{
 					</div>
 
 
-					<div className="sec__body__spis_one___tra" style={{  top: this.state.ClassNameStrel._2[4].deFTop  }}>
+					<div className="sec__body__spis_one___tra" style={{  }}>
 						<div className="sec__body__spis_one___rec_icon_2"></div>
 						<a href="#">Трансляции</a>
 						<div id="_2"
