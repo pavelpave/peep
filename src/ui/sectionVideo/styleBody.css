@@ -243,8 +243,10 @@ z-index: 100;
 	/* display: none; */
 	z-index: -1;
 	width: 0px;
+    position: absolute;
 	left: -200%;
 	height: 0px;
+	opacity: 0;
 	transition: 1s;
 }
  /* .sec__body__spis_one___sech{

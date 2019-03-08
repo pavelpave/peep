@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import podgruz from "./ajaxVideo";
-import Blocks_inf from "./blocks_10";
+import BlocksVideo from "./blocks_10";
 // import Videoapp  from './videoPOTOCK.js';
 import './styleBody.css';
 export default class BodyVideo extends Component{
@@ -10,7 +10,7 @@ export default class BodyVideo extends Component{
 		this.ObnState = this.ObnState.bind(this)
 		this.state = {
 			ClassNameStrel : {
-				//     0        1               2                 3                   4
+				//     0        1               2                 3                   4fix
 				_1: [true, podgruz()[0], { recomend: true },	  1, { deFTop: '30px', Top: '30px'   }],
 				_2: [false, podgruz()[0], { translation: false }, 1, { deFTop: '735px', Top: '-27px' }],
 				_3: [false, podgruz()[0], { serch_kanal: false }, 2, { deFTop: '795px', Top: '30px' }],
@@ -25,13 +25,7 @@ export default class BodyVideo extends Component{
 		}
 		this.usstr = this.usstr.bind(this)
 	}
-	grid__video__system(blockOut){
-		// if (blockOut) {
-		// 	return podgruz()
-		// }else{
-		// 	return
-		// }
-	}
+
 	usstr(e){
 		// console.log(e.target.id);
 		
@@ -40,11 +34,11 @@ export default class BodyVideo extends Component{
 		    toggl;
 		    if (this.state.ClassNameStrel[index][0]) {
 		    	toggl = false
-			} else if (this.state.ClassNameStrel[index][0] == false){
+			} else if (this.state.ClassNameStrel[index][0] === false){
 		    	toggl = true
 			}
 			for (const key in this.state.ClassNameStrel) {
-				if (this.state.ClassNameStrel[key][0] == true) {
+				if (this.state.ClassNameStrel[key][0] === true) {
 				keyTrue+=1
 				}
 				if (keyTrue >= 1){
@@ -60,10 +54,10 @@ export default class BodyVideo extends Component{
 			
 		for (const keyTo in this.state.ClassNameStrel[index][2]) {
 			 if (index) {
-				 if (this.state.ClassNameStrel[index][0] == false) {
+				 if (this.state.ClassNameStrel[index][0] === false) {
 					 this.state.ClassNameStrel[index][2][keyTo] = false
 					 
-				 }else if (this.state.ClassNameStrel[index][0] == true){
+				 }else if (this.state.ClassNameStrel[index][0] === true){
 					 this.state.ClassNameStrel[index][2][keyTo] = true
 				 }
 			 }
@@ -112,6 +106,14 @@ export default class BodyVideo extends Component{
 							this.state.ClassNameStrel['_5'][4].deFTop = '30px'
 							this.state.ClassNameStrel['_6'][4].deFTop = '-27px'
 						}
+						if (this.state.ClassNameStrel[s][3] > 3) {
+							this.state.ClassNameStrel['_7'][4].deFTop = '30px'
+							this.state.ClassNameStrel['_8'][4].deFTop = '-27px'
+						}
+						if (this.state.ClassNameStrel[s][3] > 3) {
+							this.state.ClassNameStrel['_9'][4].deFTop = '30px'
+							this.state.ClassNameStrel['_10'][4].deFTop = '-27px'
+						}
 						
 				}
 					
@@ -119,7 +121,7 @@ export default class BodyVideo extends Component{
 			}		
 		}else{
 			for (const key in this.state.ClassNameStrel) {
-				if (this.state.ClassNameStrel[key] != this.state.ClassNameStrel[s]) {
+				if (this.state.ClassNameStrel[key] !== this.state.ClassNameStrel[s]) {
 					if (key == '_2') {
 						this.state.ClassNameStrel[key][4].deFTop = '-28px'
 					}else if(key == '_4'){
@@ -149,7 +151,15 @@ export default class BodyVideo extends Component{
 							onClick={this.usstr}></div>
 
 						<div className={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._1[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._1 )}
+							<BlocksVideo />
+							<BlocksVideo />
+							<BlocksVideo />
+							<BlocksVideo />
+							<BlocksVideo />
+							<BlocksVideo />
+							<BlocksVideo />
+							<BlocksVideo />
+							<BlocksVideo />
 						</div>
 					</div>
 
@@ -163,7 +173,7 @@ export default class BodyVideo extends Component{
 						></div>
 
 						<div className={this.state.ClassNameStrel._2[2].translation ? "video__block__open_right" : "video__block__close"} style={{ height: this.state.ClassNameStrel._2[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._2)}
+							{}
 						</div>
 					</div>
 
@@ -175,7 +185,7 @@ export default class BodyVideo extends Component{
 						</div>
 
 						<div className={this.state.ClassNameStrel._3[2].serch_kanal ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._3[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._3)}
+							{}
 						</div>
 					</div>
 
@@ -185,7 +195,7 @@ export default class BodyVideo extends Component{
 						<div id="_4" className={this.state.ClassNameStrel._4[0] ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
 							onClick={this.usstr}></div>
 						<div className={this.state.ClassNameStrel._4[2].podpis ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._4[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._4)}
+							{}
 						</div>
 					</div>
 
@@ -195,7 +205,7 @@ export default class BodyVideo extends Component{
 						<div id="_5" className={this.state.ClassNameStrel._5[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}></div>
 						<div className={this.state.ClassNameStrel._5[2].create_pl ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._5[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._5)}
+							{}
 						</div>
 					</div>
 
@@ -205,7 +215,7 @@ export default class BodyVideo extends Component{
 						<div id="_6" className={this.state.ClassNameStrel._6[0] ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
 							onClick={this.usstr}></div>
 						<div className={this.state.ClassNameStrel._6[2].video_frend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._6[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._6)}
+							{}
 						</div>
 					</div>
 
@@ -215,7 +225,7 @@ export default class BodyVideo extends Component{
 						<div id="_7" className={this.state.ClassNameStrel._7[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}></div>
 						<div className={this.state.ClassNameStrel._7[2].pozje ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._7[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._7)}
+							{}
 						</div>
 					</div>
 
@@ -225,7 +235,7 @@ export default class BodyVideo extends Component{
 						<div id="_8" className={this.state.ClassNameStrel._8[0] ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
 							onClick={this.usstr}></div>
 						<div className={this.state.ClassNameStrel._8[2].history ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._8[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._8)}
+							{}
 						</div>
 					</div>
 
@@ -235,7 +245,7 @@ export default class BodyVideo extends Component{
 						<div id="_9" className={this.state.ClassNameStrel._9[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}></div>
 						<div className={this.state.ClassNameStrel._9[2].serch_kanal ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._9[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._9)}
+							{}
 						</div>
 					</div>
 
@@ -245,7 +255,7 @@ export default class BodyVideo extends Component{
 						<div id="_10" className={this.state.ClassNameStrel._10[0] ? "sec__body__spis_one___rec_us_l  active_icon_two" : "sec__body__spis_one___rec_us_l"}
 							onClick={this.usstr}></div>
 						<div className={this.state.ClassNameStrel._10[2].my_post ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._10[1] }}>
-							{this.grid__video__system(this.state.ClassNameStrel._10)}
+							{}
 						</div>
 					</div>
 				</div>
