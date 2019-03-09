@@ -13,7 +13,7 @@ class BlocksVideo extends Component{
 		
 		return(
 			<div className="block_wrap_video">
-				<a href="#"><div className='block__img__previo__video' style={{ background: `url(${i})` , backgroundSize:'cover'}}></div></a>
+				<a href="#"><div className='block__img__previo__video' style={{ background: `url(${this.urlImageVideo})` , backgroundSize:'cover'}}></div></a>
 				<div className='block__text__name_NameK'>
 					<p className='block__text__name__video'><a href='#'>Название видео</a></p>
 					<p className='block__text__name__kanal'><a href='#'>Название канала</a></p>
