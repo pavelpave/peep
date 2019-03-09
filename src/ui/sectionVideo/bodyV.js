@@ -158,8 +158,7 @@ export default class BodyVideo extends Component{
 							<BlocksVideo />
 							<BlocksVideo />
 							<BlocksVideo />
-							<BlocksVideo />
-							<BlocksVideo />
+							
 						</div>
 					</div>
 
@@ -180,7 +179,7 @@ export default class BodyVideo extends Component{
 				<div className="sec__body__spis_one___sech" style={{  top: this.state.ClassNameStrel._3[4].deFTop  }}>
 						<div className="sec__body__spis_one___rec_icon_3"></div>
 						<a href="#">Найти канал</a>
-						<div id="_3" className={this.state.ClassNameStrel._3[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
+						<div id="_3" className={this.state.ClassNameStrel._3[0] ? "sec__body__spis_one___rec_us  active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}>
 						</div>
 
@@ -202,7 +201,7 @@ export default class BodyVideo extends Component{
 						<div className="sec__body__spis_one___sech" style={{  top: this.state.ClassNameStrel._5[4].deFTop }}>
 						<div className="sec__body__spis_one___rec_icon_5"></div>
 						<a href="#">Создать плейлист</a>
-						<div id="_5" className={this.state.ClassNameStrel._5[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
+						<div id="_5" className={this.state.ClassNameStrel._5[0] ? "sec__body__spis_one___rec_us  active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}></div>
 						<div className={this.state.ClassNameStrel._5[2].create_pl ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._5[1] }}>
 							{}
@@ -222,7 +221,7 @@ export default class BodyVideo extends Component{
 					<div className="sec__body__spis_one___sech" style={{  top: this.state.ClassNameStrel._7[4].deFTop }}>
 						<div className="sec__body__spis_one___rec_icon_7"></div>
 						<a href="#">Посмотреть позже</a>
-						<div id="_7" className={this.state.ClassNameStrel._7[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
+						<div id="_7" className={this.state.ClassNameStrel._7[0] ? "sec__body__spis_one___rec_us  active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}></div>
 						<div className={this.state.ClassNameStrel._7[2].pozje ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._7[1] }}>
 							{}
@@ -242,9 +241,9 @@ export default class BodyVideo extends Component{
 					<div className="sec__body__spis_one___sech" style={{  top: this.state.ClassNameStrel._9[4].deFTop  }}>
 						<div className="sec__body__spis_one___rec_icon_9"></div>
 						<a href="#">Избранные</a>
-						<div id="_9" className={this.state.ClassNameStrel._9[0] ? "sec__body__spis_one___rec_us nejdan active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
+						<div id="_9" className={this.state.ClassNameStrel._9[0] ? "sec__body__spis_one___rec_us  active__icon active_str_n" : "sec__body__spis_one___rec_us pasiv_us_strel"}
 							onClick={this.usstr}></div>
-						<div className={this.state.ClassNameStrel._9[2].serch_kanal ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._9[1] }}>
+						<div className={this.state.ClassNameStrel._9[2].izbran ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._9[1] }}>
 							{}
 						</div>
 					</div>
