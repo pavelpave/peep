@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import i from '../sectionVideo/img/qwdq.png'
 
 import s from "./styleBlockVideo.css";
 
@@ -7,10 +8,12 @@ class BlocksVideo extends Component{
 		super(props)
 		this.urlImageVideo = this.props.urlImageVideo
 	}
+	
 	render(){
+		
 		return(
 			<div className="block_wrap_video">
-				<a href="#"><div className='block__img__previo__video' style={{ background: "url(http://localhost:3000/img/qwdq.png)" +"cover no-repeat"}}></div></a>
+				<a href="#"><div className='block__img__previo__video' style={{ background: `url(${i})` , backgroundSize:'cover'}}></div></a>
 				<div className='block__text__name_NameK'>
 					<p className='block__text__name__video'><a href='#'>Название видео</a></p>
 					<p className='block__text__name__kanal'><a href='#'>Название канала</a></p>
