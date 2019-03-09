@@ -17,8 +17,17 @@
     left: 7%;
     border-radius: 10px;
     top: 14px;
-    background: rgb(38, 16, 99);
+  
+    /* background: #213381;; */
+      /* background-image: url('img/qwdq.png'); */
+    /* background-size: cover; */
     height: 63%;
+}
+.block__img__previo__video img {
+    background-size: cover;
+        position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .block__text__name_NameK {
         position: absolute;

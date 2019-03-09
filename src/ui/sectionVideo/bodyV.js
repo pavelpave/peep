@@ -151,11 +151,11 @@ export default class BodyVideo extends Component{
 							onClick={this.usstr}></div>
 
 						<div className={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._1[1] }}>
-							<BlocksVideo />
-							<BlocksVideo />
-							<BlocksVideo />
-							<BlocksVideo />
-							<BlocksVideo />
+							<BlocksVideo urlImageVideo='img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='img/qwdq.png'/>
 							<BlocksVideo />
 							<BlocksVideo />
 							
