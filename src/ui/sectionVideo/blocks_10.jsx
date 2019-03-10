@@ -10,9 +10,10 @@ class BlocksVideo extends Component{
 		this.image 
 	}
 	funImg(){
-		new Promise((rsolve,rejeckt) =>{
+		let pr = new Promise((rsolve,rejeckt) =>{
 			this.image = require(this.urlImageVideo)
 		})
+		pr.then()
 	}
 	render(){
 		
