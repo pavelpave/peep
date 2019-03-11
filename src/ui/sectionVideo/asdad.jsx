@@ -1,4 +1,4 @@
-<div className='sec__body__spis_one___rec' style={{ top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }} >
+{/* <div className='sec__body__spis_one___rec' style={{ top: this.funSwapMath(this.state.ClassNameStrel._1[0]) }} >
     <div className="sec__body__spis_one___rec_icon_1"></div>
     <a href="#">Рекомендации</a>
     <div id="_1" className={this.state.ClassNameStrel._1[0] ? "sec__body__spis_one___rec_us active__icon" : "sec__body__spis_one___rec_us "}
@@ -52,4 +52,4 @@ usstr(e){
         }
     });
     e.stopPropagation()
-}
+} */}

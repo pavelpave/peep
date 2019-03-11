@@ -27,11 +27,9 @@ export default class BodyVideo extends Component{
 	}
 
 	usstr(e){
-		// console.log(e.target.id);
-		
-		let index     = e.target.id,
-			keyTrue   = 0,
-		    toggl;
+		let index     = e.target.id;
+		let	keyTrue   = 0;
+		let   toggl;
 		    if (this.state.ClassNameStrel[index][0]) {
 		    	toggl = false
 			} else if (this.state.ClassNameStrel[index][0] === false){
@@ -62,9 +60,9 @@ export default class BodyVideo extends Component{
 				 }
 			 }
 		}
-		this.funSwapMath(e.target.id)
-		this.ObnState(this.state.ClassNameStrel, this.state.ClassNameStrel)
-		e.stopPropagation()
+		this.funSwapMath(e.target.id);
+		this.ObnState(this.state.ClassNameStrel, this.state.ClassNameStrel);
+		e.stopPropagation();
 	}
 
 	ObnState(newState,prevState){
@@ -151,13 +149,13 @@ export default class BodyVideo extends Component{
 							onClick={this.usstr}></div>
 
 						<div className={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._1[1] }}>
-							<BlocksVideo urlImageVideo='../sectionVideo/img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='../sectionVideo/img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='../sectionVideo/img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='../sectionVideo/img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='../sectionVideo/img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='../sectionVideo/img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='../sectionVideo/img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='./img/видео друзей.png'/>
+							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
 							
 						</div>
 					</div>
