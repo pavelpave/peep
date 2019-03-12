@@ -1,12 +1,13 @@
 import React , {Component} from 'react';
 import podgruz from "./ajaxVideo";
 import BlocksVideo from "./blocks_10";
+import clickVideoStart from "./clickVideoStart";
 // import Videoapp  from './videoPOTOCK.js';
 import './styleBody.css';
 export default class BodyVideo extends Component{
 	constructor(props){
 		super(props)
-		
+		this.clicktest = this.clicktest.bind(this)
 		this.ObnState = this.ObnState.bind(this)
 		this.state = {
 			ClassNameStrel : {
@@ -24,6 +25,7 @@ export default class BodyVideo extends Component{
 			}
 		}
 		this.usstr = this.usstr.bind(this)
+		
 	}
 
 	usstr(e){
@@ -137,6 +139,9 @@ export default class BodyVideo extends Component{
 			}
 		}
 	}
+	clicktest(n,id){
+		return clickVideoStart
+	}
 	render(){
 		return(
 			<section className="sec__body">
@@ -149,13 +154,13 @@ export default class BodyVideo extends Component{
 							onClick={this.usstr}></div>
 
 						<div className={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._1[1] }}>
-							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='./img/видео друзей.png'/>
-							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo onClick={this.clicktest('name','id' ,{})} nameVideo='hi pipl' nameKanal="my Kanal" urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo onClick={this.clicktest('name','id' ,{})} nameVideo='one pice' nameKanal="my Kanal" urlImageVideo='./img/видео друзей.png'/>
+							<BlocksVideo onClick={this.clicktest('name','id' ,{})} nameVideo='myVideo' nameKanal="my Kanal" urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo onClick={this.clicktest('name','id' ,{})} nameVideo='myVideo' nameKanal="my Kanal" urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo onClick={this.clicktest('name','id' ,{})} nameVideo='myVideo' nameKanal="my Kanal" urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo onClick={this.clicktest('name','id' ,{})} nameVideo='myVideo' nameKanal="my Kanal" urlImageVideo='./img/qwdq.png'/>
+							<BlocksVideo onClick={this.clicktest('name','id' ,{})} nameVideo='myVideo' nameKanal="my Kanal" urlImageVideo='./img/qwdq.png'/>
 							
 						</div>
 					</div>

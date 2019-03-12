@@ -12,9 +12,28 @@
     left: 7%;
     border-radius: 10px;
     top: 14px;
+    transition: 1s;
  /* background-image:  url("img/qwdq.png"); */
     background-size: cover;
     height: 63%;
+}
+.block__img__previo__video:hover{
+    border: 3px solid black;
+    transition: .6s;
+    box-shadow: inset 10px 10px 20px  black;
+}
+.block__img__previo__video:hover::before{
+    content: '';
+    transition: 1s;
+    background-image: url('img/Без\ имени-1.png');
+    background-size: cover;
+    position: absolute;
+    width: 18%;
+    left: 40%;
+    top: 27%;
+    height: 41%;   
+     
+
 }
 /* .block__img__previo__video  {
     background-size: cover;
@@ -28,6 +47,7 @@
     height: 100px;
     /* background: blue; */
     top: 68%;
+    
     /* left: 0%; */
 }
 .block__text__name__video{
@@ -35,6 +55,7 @@
     font-size: 21px;
     text-align: center;
     top: -24px;
+    
 }
 .block__text__name__kanal{
     position: relative;
@@ -48,5 +69,5 @@
 }
 .block__text__name__video a{
     text-decoration: none;
-    
+    color: black;
 }
