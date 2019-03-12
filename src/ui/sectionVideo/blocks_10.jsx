@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom'
 import i from '../sectionVideo/img/qwdq.png'
 import s from "./styleBlockVideo.css";
 
@@ -20,10 +21,10 @@ class BlocksVideo extends Component{
 		return(
 			
 			<div className="block_wrap_video">
-				<a href="#"><div className='block__img__previo__video' style={{ background: `url(${this.test()})` , backgroundSize:'cover'}}></div></a>
+				<NavLink to='/'><div className='block__img__previo__video' style={{ background: `url(${this.test()})` , backgroundSize:'cover'}}></div></NavLink>
 				<div className='block__text__name_NameK'>
-					<p className='block__text__name__video'><a href='#'>{this.nameVideo}</a></p>
-					<p className='block__text__name__kanal'><a href='#'>{this.nameKanal}</a></p>
+					<p className='block__text__name__video'><NavLink to='/'>{this.nameVideo}</NavLink></p>
+					<p className='block__text__name__kanal'><NavLink to='/'>{this.nameKanal}</NavLink></p>
 				</div>
 			</div>
 		)
