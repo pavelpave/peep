@@ -12,19 +12,19 @@ render(){
 				<nav>
 					<ul className="nav__menu__ul">
 						<li>
-							<NavLink to='/'>Главная</NavLink>
+							<NavLink to='/home'>Главная</NavLink>
 							<div className="li_capl"></div>
 						</li>
 						<li>
-							<NavLink to='/'>Сообщения</NavLink>
+							<NavLink to='/messeng'>Сообщения</NavLink>
 							<div className="li_capl"></div>
 						</li>
 						<li>
-							<NavLink to='/'>Трансляции</NavLink>
+							<NavLink to='/playing'>Трансляции</NavLink>
 							<div className="li_capl"></div>
 						</li>
 						<li>
-							<NavLink to='/'>Анонимка</NavLink>
+							<NavLink to='/anonim'>Анонимка</NavLink>
 							<div className="li_capl"></div>
 						</li>
 					</ul>

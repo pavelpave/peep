@@ -21,10 +21,10 @@ class BlocksVideo extends Component{
 		return(
 			
 			<div className="block_wrap_video">
-				<NavLink to='/'><div className='block__img__previo__video' style={{ background: `url(${this.test()})` , backgroundSize:'cover'}}></div></NavLink>
+				<NavLink to={'/videoStart/'+this.nameVideo}><div className='block__img__previo__video' style={{ background: `url(${this.test()})` , backgroundSize:'cover'}}></div></NavLink>
 				<div className='block__text__name_NameK'>
-					<p className='block__text__name__video'><NavLink to='/'>{this.nameVideo}</NavLink></p>
-					<p className='block__text__name__kanal'><NavLink to='/'>{this.nameKanal}</NavLink></p>
+					<p className='block__text__name__video'><NavLink to={'/videoStart/'+this.nameVideo}>{this.nameVideo}</NavLink></p>
+					<p className='block__text__name__kanal'><NavLink to={'/videoStart/'+this.nameVideo}>{this.nameKanal}</NavLink></p>
 				</div>
 			</div>
 		)
