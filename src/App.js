@@ -14,7 +14,6 @@ class App extends Component {
     	    <div>
 
            	<Heder />
-            
             <Route component={BodyVideo} path='/home'/>
             <Route component={VideoStartPage} path='/videoStart' />
             <FooterComponent />

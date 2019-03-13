@@ -24,9 +24,38 @@ export default class BodyVideo extends Component{
 				_10: [false, podgruz()[0], { my_post: false }, 	  5, { deFTop: '735px' , Top: '-27px'}]
 			}
 		}
+		this.massAjax = [{
+			nameKanal: 'myName',
+			nameVideo: 'nameVodeo',
+			imgUrl: './img/qwdq.png'
+			},
+			{
+				nameKanal: 'myName',
+				nameVideo: 'nameVodeo',
+				imgUrl: './img/qwdq.png'
+			},
+			{
+				nameKanal: 'myName',
+				nameVideo: 'nameVodeo',
+				imgUrl: './img/qwdq.png'
+			},
+			{
+				nameKanal: 'myName',
+				nameVideo: 'nameVodeo',
+				imgUrl: './img/qwdq.png'
+			}]
 		this.usstr = this.usstr.bind(this)
+		this.vidoPlayList = this.vidoPlayList.bind(this)
 	}
-
+	vidoPlayList(){
+		let newMassAjax = this.massAjax.map((el)=>{
+			return(
+				<BlocksVideo nameKanal={el.nameKanal} nameVideo={el.nameVideo} urlImageVideo={el.imgUrl} />	
+			)
+		})
+		return newMassAjax
+	}
+	
 	usstr(e){
 		let index     = e.target.id;
 		let	keyTrue   = 0;
@@ -150,14 +179,7 @@ export default class BodyVideo extends Component{
 							onClick={this.usstr}></div>
 
 						<div className={this.state.ClassNameStrel._1[2].recomend ? "video__block__open" : "video__block__close"} style={{ height: this.state.ClassNameStrel._1[1] }}>
-							<BlocksVideo nameKanal='name kanal' nameVideo='my name'urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo nameKanal='name kanal' nameVideo='my name'urlImageVideo='./img/видео друзей.png'/>
-							<BlocksVideo nameKanal='name kanal' nameVideo='my name'urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo nameKanal='name kanal' nameVideo='my name'urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo nameKanal='name kanal' nameVideo='my name'urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo nameKanal='name kanal' nameVideo='my name'urlImageVideo='./img/qwdq.png'/>
-							<BlocksVideo nameKanal='name kanal' nameVideo='my name'urlImageVideo='./img/qwdq.png'/>
-							
+							{this.vidoPlayList()}
 						</div>
 					</div>
 
