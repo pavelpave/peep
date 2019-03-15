@@ -4,11 +4,16 @@ body,html{
    width: 100%;
 
 }
+.heder_page{
+	position: relative;
+	grid-area: heder;
+}
 .polosa__heder{
 	width: 100%;
     background: #fff;
     height: 70px;
-    top: -1px;
+	top: -1px;
+
     z-index: 1000;
     position: fixed;
     border-bottom: 7px solid black;

@@ -1,9 +1,14 @@
 .test{
-    position: absolute;
+    position: relative;
     width: 100%;
     box-sizing: border-box;
     height: 500px;
     background: red;
-    top:1455px;
+    /* top:1455px; */
     z-index: 100;
+    margin-top: 58px;
+    grid-area: footer
 }
+/* .footer_page{
+  
+} */

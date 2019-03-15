@@ -9,21 +9,7 @@ export default class BodyVideo extends Component{
 		super(props)
 		
 		this.ObnState = this.ObnState.bind(this)
-		this.state = {
-			ClassNameStrel : {
-				//     0        1               2                 3                   4fix
-				_1: [true, podgruz()[0], { recomend: true },	  1, { deFTop: '30px', Top: '30px'   }],
-				_2: [false, podgruz()[0], { translation: false }, 1, { deFTop: '735px', Top: '-27px' }],
-				_3: [false, podgruz()[0], { serch_kanal: false }, 2, { deFTop: '795px', Top: '30px' }],
-				_4: [false, podgruz()[0], { podpis: false }, 	  2, { deFTop: '735px', Top: '-27px' }],
-				_5: [false, podgruz()[0], { create_pl: false },	  3, { deFTop: '795px', Top: '30px' }],
-				_6: [false, podgruz()[0], { video_frend: false }, 3, { deFTop: '735px', Top: '-27px' }],
-				_7: [false, podgruz()[0], { pozje: false }, 	  4, { deFTop: '795px', Top: '30px' }],
-				_8: [false, podgruz()[0], { history: false },	  4, { deFTop: '735px', Top: '-27px' }],
-				_9: [false, podgruz()[0], { izbran: false },	  5, { deFTop: '795px' , Top: '30px'}],
-				_10: [false, podgruz()[0], { my_post: false }, 	  5, { deFTop: '735px' , Top: '-27px'}]
-			}
-		}
+		this.state = this.props.state
 		this.massAjax = [{
 			nameKanal: 'myName',
 			nameVideo: 'nameVodeo',
@@ -55,10 +41,11 @@ export default class BodyVideo extends Component{
 		})
 		return newMassAjax
 	}
-	
+
 	usstr(e){
 		let index     = e.target.id;
 		let	keyTrue   = 0;
+		let keyFalse = 0;
 		let   toggl;
 		    if (this.state.ClassNameStrel[index][0]) {
 		    	toggl = false
@@ -69,11 +56,25 @@ export default class BodyVideo extends Component{
 				if (this.state.ClassNameStrel[key][0] === true) {
 				keyTrue+=1
 				}
+				if (this.state.ClassNameStrel[key][0] === false) {
+					keyFalse+=1
+				}
+				// debugger
+				if (keyFalse === 9 ) {
+					this.state.ClassNameStrel[index][0] = true
+					for (const keys in this.state.ClassNameStrel[index][2]) {
+						this.state.ClassNameStrel[index][2][keys] = true
+					}
+					toggl = true
+					keyTrue = 0
+				}
+				
 				if (keyTrue >= 1){
 				this.state.ClassNameStrel[key][0] = false
 					for (const keys in this.state.ClassNameStrel[key][2]) {
 						this.state.ClassNameStrel[key][2][keys] = false
 					}
+					
 				}
 				
 			 }
@@ -193,7 +194,7 @@ export default class BodyVideo extends Component{
 						></div>
 
 						<div className={this.state.ClassNameStrel._2[2].translation ? "video__block__open_right" : "video__block__close"} style={{ height: this.state.ClassNameStrel._2[1] }}>
-							{}
+							{this.vidoPlayList()}
 						</div>
 					</div>
 

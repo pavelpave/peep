@@ -1,6 +1,6 @@
 
 .sec__body{
-	position: absolute;
+	position: relative;
 	width: 100%;
 	height: 1389px;
 	top :70px;
@@ -8,6 +8,7 @@
 	z-index: 1;
 	background: #363650;
 	overflow: hidden;
+	 grid-area: body;
 }
 .sec__body__spis_one{
 	position: relative;

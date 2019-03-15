@@ -6,7 +6,7 @@ class Heder extends React.Component{
 
 render(){
 	return(
-		<section>
+		<section className='heder_page'>
 			<div className="polosa__heder">
 				<NavLink to='/'><div className='header__logo'></div></NavLink>
 				<nav>
