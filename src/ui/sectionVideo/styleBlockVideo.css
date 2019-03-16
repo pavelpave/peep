@@ -20,7 +20,7 @@
 .block__img__previo__video:hover{
     border: 3px solid black;
     transition: .6s;
-    box-shadow: inset 10px 10px 20px  black;
+    box-shadow:10px 10px 20px  black;
 }
 .block__img__previo__video:hover::before{
     content: '';
