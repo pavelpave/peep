@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
-import i from '../sectionVideo/img/qwdq.png'
+// import i from '../sectionVideo/img/qwdq.png'
 import s from "./styleBlockVideo.css";
 
 class BlocksVideo extends Component{
@@ -17,7 +17,7 @@ class BlocksVideo extends Component{
 		return asd
 	}
 	render(){
-		//`url(${this.funImg().then().catch(() => { console.log('0') })})`
+	
 		return(
 			
 			<div className="block_wrap_video">

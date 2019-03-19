@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
-import {NavLink} from 'react-router-dom'
-import podgruz from "./ajaxVideo";
-import BlocksVideo from "./blocks_10";
+import {NavLink} 		   from 'react-router-dom'
+import podgruz 			   from "./ajaxVideo";
+import BlocksVideo 		   from "./blocks_10";
 // import Videoapp  from './videoPOTOCK.js';
 import './styleBody.css';
 export default class BodyVideo extends Component{
@@ -10,38 +10,20 @@ export default class BodyVideo extends Component{
 		
 		this.ObnState = this.ObnState.bind(this)
 		this.state = this.props.state
-		this.massAjax = [{
-			nameKanal: 'myName',
-			nameVideo: 'nameVodeo',
-			imgUrl: './img/qwdq.png'
-			},
-			{
-				nameKanal: 'myName',
-				nameVideo: 'nameVodeo',
-				imgUrl: './img/qwdq.png'
-			},
-			{
-				nameKanal: 'myName',
-				nameVideo: 'nameVodeo',
-				imgUrl: './img/qwdq.png'
-			},
-			{
-				nameKanal: 'myName',
-				nameVideo: 'nameVodeo',
-				imgUrl: './img/qwdq.png'
-			}]
+		this.massAjax = this.props.massAjax
 		this.usstr = this.usstr.bind(this)
 		this.vidoPlayList = this.vidoPlayList.bind(this)
 	}
 	vidoPlayList(){
-		let newMassAjax = this.massAjax.map((el)=>{
+		let newMassAjax = this.massAjax.map((el , i)=>{
 			return(
-				<BlocksVideo nameKanal={el.nameKanal} nameVideo={el.nameVideo} urlImageVideo={el.imgUrl} />	
+				<BlocksVideo key={i} nameKanal={el.nameKanal} nameVideo={el.nameVideo} urlImageVideo={el.imgUrl} />	
 			)
 		})
 		return newMassAjax
 	}
 
+	
 	usstr(e){
 		let index     = e.target.id;
 		let	keyTrue   = 0;
