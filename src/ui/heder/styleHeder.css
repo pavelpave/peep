@@ -16,7 +16,7 @@ body,html{
 
     z-index: 1000;
     position: fixed;
-    border-bottom: 7px solid black;
+    border-bottom: 7px solid #777777;
 }
 .header__logo{
 	position: absolute;
@@ -39,6 +39,7 @@ body,html{
 	display: flex;
 	left: 20%;
 	top: 00px;
+	font-weight: 500;
 }
 .nav__menu__ul li {
 	position: relative;
@@ -64,11 +65,14 @@ body,html{
 	/*background:blue;*/
 }
 .heder__block__name{
-	position: relative;
-    top: -17px;
+    position: relative;
+    top: -5px;
     color: #38569d;
-	font-size: 19px;
-	cursor: pointer;
+    font-size: 19px;
+    cursor: pointer;
+    width: 199px;
+    text-align: center;
+    right: 28%;
 }
 .heder__block__name a{
 	position: relative;
@@ -82,7 +86,7 @@ body,html{
 	height: 50px;
 	background-image: url(img/jess-watters-559478-unsplash.jpg);
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 }
 .heder__block__img{
 	width: 50px;
@@ -101,9 +105,12 @@ body,html{
 	border-radius: 5px;
 	border: 2px solid #70747f;
 	font-size: 19px;
-	box-shadow: 10px 10px  3px 3px inset #000;
-
-
+	box-shadow: -3px 3px 0px 1px #606063;
+	transition: .5s;
+}
+.nav__menu__ul li:active{
+	transition: .5s;
+	/* box-shadow: -3px 3px 0px 1px #606063 */
 }
 
 
@@ -122,4 +129,22 @@ body,html{
     color: #38569d;
 	font-size: 19px;
 	cursor: pointer;
+}
+.Registratiom_Link{
+    position: relative;
+
+}
+.Registratiom_Link p{
+    font-size: 20px;
+    position: absolute;
+    right: 7%;
+    line-height: 36px;
+}
+.Registratiom_Link p:hover{
+	transition: 0.5s;
+	border-bottom: 3px solid #38569d
+}
+.Registratiom_Link p a{
+	text-decoration: none;
+	color: #38569d
 }

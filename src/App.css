@@ -17,13 +17,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+body {
+  font-family: "Roboto" sans-serif;
+}
 .App-link {
   color: #61dafb;
 }
 .grid_page{
     display: grid;
-    grid-template-rows: 6px 1fr  500px;
+    grid-template-rows: 6px 1fr  823px;
     grid-template-columns: 1fr;
     grid-template-areas:"heder"
                         "body"

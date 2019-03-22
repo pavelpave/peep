@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
+import SignIn from './ProfileComponent'
 import './styleHeder.css';
 
 class Heder extends React.Component{
+constructor(props){
+	super(props)
+	this.inlocalStorag = this.props.inlocalStorag
+}
 
 render(){
 	return(
@@ -12,7 +17,7 @@ render(){
 				<nav>
 					<ul className="nav__menu__ul">
 						<li>
-							<NavLink to='/home'>Главная</NavLink>
+							<NavLink to='/home#'>Главная</NavLink>
 							<div className="li_capl"></div>
 						</li>
 						<li>
@@ -29,12 +34,7 @@ render(){
 						</li>
 					</ul>
 				</nav>
-				<div className="heder__block__akk">
-					<p className="heder__block__name"><NavLink to='/'>Анастасия</NavLink></p>
-					<div className="heder__block__img">
-						<div className="block__img"></div>
-					</div>
-				</div>
+				<SignIn  inlocalStorag={this.inlocalStorag}/>
 			</div>
 		</section>
 	)

@@ -6,8 +6,10 @@ import Heder from './ui/heder/heder.js';
 import BodyVideo from './ui/sectionVideo/bodyV.js'
 import VideoStartPage from "./ui/sectionVideo/videoStartPage/videoStart";
 import FooterComponent from './ui/footer/Footer'
+import SignInSignUpForm from "./ui/signup_signin/SignUp_signInForm"
 import state from "./state";
 import massAjax from './ajax'
+import inlocalStorag from './localStorag/workinLocalStorag'
 class App extends Component {
 
   render() {
@@ -15,9 +17,10 @@ class App extends Component {
       <BrowserRouter>
     	    <div className='grid_page'>
 
-          <Heder/>
+          <Heder inlocalStorag={inlocalStorag}/>
              <Route component={() => <BodyVideo state={state} massAjax={massAjax} />} path='/home'/>
              <Route render={() => <VideoStartPage/>} path='/videoStart' />
+             <Route render={()=> <SignInSignUpForm />} path="/signInUp/" />
           <FooterComponent />
 
           </div>

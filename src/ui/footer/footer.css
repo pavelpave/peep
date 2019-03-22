@@ -1,14 +1,257 @@
-.test{
-    position: relative;
+.FOot{
+       position: relative;
     width: 100%;
     box-sizing: border-box;
-    height: 500px;
-    background: red;
-    /* top:1455px; */
+    height: 100%;
+    background: url('./img/1234567105.png');
+    background-size: 100% 107%;
+    background-position: 0 -33px;
+    /* top: 1455px; */
     z-index: 100;
     margin-top: 58px;
-    grid-area: footer
+    grid-area: footer;
 }
-/* .footer_page{
-  
-} */
+.block_info_pole_top_users{
+    position: relative;
+    background: #fff;
+
+    height: 90%;
+    width: 40%;
+    left: 6%;
+    border-radius: 10px;
+    top: 4%;
+    box-shadow: -19px 9px 28px black;
+    border-bottom: 4px solid #808080;
+    border-left: 4px solid #808080;
+}
+.block_info_pole_top_users a {
+    text-decoration: none
+}
+.block_info_create_stick{
+    position: absolute;
+    width: 47%;
+    border-radius: 10px;
+    height: 17%;
+
+    top: 1%;
+    background: #363650;
+    left: 1%;
+    border: 5px solid #5b5b83;
+    color: #fff;
+    box-shadow: -5px 7px 14px grey;
+}
+.block_info_create_stick p{
+    position: relative;
+    left: 18%;
+    font-size: 22px;
+    font-weight: bold;
+}
+.block_info_top_rolick{
+    position: absolute;
+    width: 45%;
+    right: 1%;
+    top: 1%;
+    height: 17%;
+    /* text-align: right; */
+    background: transparent;
+    border: 5px solid #363650;
+    border-radius: 10px;
+    box-shadow: -5px 7px 14px grey;
+}
+.block_info_top_rolick p{
+    position: relative;
+    font-size: 22px;
+    right: 14%;
+    left: 13%;
+    color: #363650;
+    font-weight: bold;
+}
+.block_info_top_rolick:hover {
+    transition: .8s;
+    background: #363650;
+    border: 5px solid #5b5b83;
+}
+.block_info_top_rolick:hover p{
+    color: #fff;
+}
+/* магазин */
+.block_footer_shoop{
+    position: absolute;
+    width: 45%;
+    height: 43%;
+    background: url('./img/syT8ij.gif');
+    background-size: cover;
+    right: 4%;
+    top: 4%;
+    border-radius: 10px;
+    border-bottom: 4px solid #000;
+    border-left: 4px solid #000;
+    border-top: 4px solid #424242;
+    border-right: 4px solid #424242;
+    box-shadow: -7px 8px 23px black;
+}
+.block_footer_shoop p {
+    position: relative;
+    color: #Fff;
+    font-weight: bold;
+    font-size: 26px;
+    left: 4%;
+    top: -1%;
+}
+.block_footer_shoop ul{
+    position: absolute;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    height: 100%;
+}
+.block_footer_shoop ul a{
+    margin-right: 10px;
+    position: relative;
+    width: 19%;
+    height: 32%;
+    background: #363650;
+    left: 12%;
+    top: 38%;
+    list-style: none;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.block_footer_shoop ul a li{
+    position: absolute;
+
+}
+.block_shoop_prev{
+    position: absolute;
+    width: 6%;
+    height: 50%;
+    border: none;
+    top: 32%;
+    left: 10%;
+    background: url(./img/стрелкаВлево.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.block_shoop_next{
+    position: absolute;
+    width: 6%;
+    height: 40%;
+    border: none;
+    top: 38%;
+    cursor: pointer;
+    right: 11%;
+    background: url(./img/стрелкаВправо.png) no-repeat;
+    background-size: cover; 
+    
+}
+.block_shoop_next:active{
+    
+    transition: .5s;
+    transform: rotateY(50deg)
+}
+.block_shoop_prev:active{
+    
+    transition: .5s;
+    transform: rotateY(50deg)
+}
+/* бонусные стикеры */
+.block_bonus_sticks{
+    position: absolute;
+    width: 45%;
+    height: 43%;
+    background: url('./img/adwd.gif');
+    background-size: cover;
+    right: 4%;
+    top: 50.5%;
+    border-radius: 10px;
+    border-bottom: 4px solid #1b1b28;
+    border-left: 4px solid #1b1b28;
+    border-top: 4px solid #6a6a7d;
+    border-right: 4px solid #6a6a7d;
+    box-shadow: -7px 8px 23px black;
+}
+.block_bonus_sticks ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+.block_bonus_sticks ul a {
+    position: relative;
+    /* background: red; */
+    width: 10%;
+    height: 10%;
+    text-decoration: none
+}
+#Google_bonus_stick{
+    position: absolute;
+    background: url('./img/google-plus.png');
+    width: 73px;
+    height: 73px;
+    left: 4%;
+}
+#Instagram_bonus_stick{
+    position: absolute;
+    background: url('./img/new-instagram-logo-png-transparent.png');
+    width: 72px;
+    height: 73px;
+    left: 23%;
+}
+#twiter_bonus_stick{
+    position: absolute;
+    background: url('./img/5761ba6c7938615555c037d1.png');
+    width: 73px;
+    height: 73px;
+    left: 42%;
+}
+#linktdin_bonus_stick{
+    position: absolute;
+    background: url('./img/1024px-Linkedin.svg.png');
+    width: 73px;
+    height: 73px;
+    left: 60%;
+}
+#vk_bonus_stick{
+    position: absolute;
+    background: url('./img/768px-VK.com-logo.svg.png');
+    width: 83px;
+    height: 75px;
+    left: 79%;
+}
+.block_bonus_sticks p{
+    position: absolute;
+    font-size: 33px;
+    top: 26%;
+    color: #a83a80;
+}
+.footer__bottom_side{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background: #222231;
+    margin-top: 78px;
+    z-index: -10;
+
+}
+.footer__bottom_side p a{
+    text-decoration: none;
+    color: rgb(158, 158, 158)
+}
+.footer__bottom_side p{
+    position: absolute;
+    left: 53%;
+    color: rgb(158, 158, 158)
+}
+.aftor_sites{
+    position: absolute;
+    left: 91%;
+    top: 14%;
+    text-align: center;
+    color: #fff;
+}
+.aftor_sites a{
+    text-decoration: none;
+    color: rgb(158, 158, 158) 
+}
