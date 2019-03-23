@@ -6,7 +6,7 @@ import BodyVideo from './ui/sectionVideo/bodyV.js'
 import VideoStartPage from "./ui/sectionVideo/videoStartPage/videoStart";
 import FooterComponent from './ui/footer/Footer'
 import SignInSignUpForm from "./ui/signup_signin/SignUp_signInForm"
-import state from "./state";
+// import state from "./state";
 import massAjax from './ajax'
 import inlocalStorag from './localStorag/workinLocalStorag'
 class App extends Component {
