@@ -25,3 +25,108 @@
     border-bottom: 3px solid #1b1b28;
     border-left: 3px solid #1b1b28;
 }
+.block_registr_siunin{
+    position: relative;
+    width: 39%;
+    height: 87%;
+    border-radius: 0px 30px 0px 30px;
+    left: 6%;
+    background: transparent;
+    top: 6%;
+    border: 6px solid #38569d;
+    box-shadow: -6px 7px 18px black;
+}
+.sinIn_block_reg{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    border-radius: 0px 20px 0px 0px;
+    overflow: hidden;
+}
+.login_in_block{
+    position: relative;
+    color: rgb(146, 146, 146);
+    left: 17%;
+    top: 29%;
+    font-size: 23px;
+    
+    font-weight: bold;
+
+}
+.registration_block{
+    position: relative;
+    left: 37%;
+    top: 31%;
+    font-weight: bold;
+    font-size: 22px;
+    color: #38569d;
+}
+.fon_reg_block{
+    position: absolute;
+    width: 100%;
+    /* top: -75px; */
+    /* left: -14%; */
+    border-radius: 0px 20px 0px 20px;
+    height: 100%;
+    background: #fff;
+    opacity: 0.6;
+}
+.form_block_registrations{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 84%;
+    background: transparent;
+    top: -5%;
+    border-radius: 0px 0px 0px 20px;
+}
+.input_login {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #38569d;
+
+}
+.inp_log_wrapp::after{
+    content: "\41B\43E\433\438\43D";
+    position: absolute;
+    width: 23%;
+    height: 22%;
+    text-align: center;
+    z-index: 2;
+    line-height: 15px;
+    top: -25%;
+    font-size: 14px;
+    background: #fff;
+    left: 8%;
+    color: rgb(68, 66, 66);
+    border: 3px solid #38569d;
+    border-bottom: 3px solid #fff;
+}
+.input_pass{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #38569d;
+    padding: 20px;
+    /* font-size: 20px; */
+}
+.inp_log_wrapp{
+    position: relative;
+    width: 75%;
+    height: 45px;
+    left: 11%;
+    top: 7%;
+    padding: 20px;
+    /* font-size: 17px; */
+}
+.inp_pass_wrapp{
+    position: relative;
+    position: relative;
+    width: 75%;
+    height: 45px;
+    left: 11%;
+    top: 18%; 
+
+}

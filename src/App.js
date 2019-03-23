@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import './App.css';
 import { BrowserRouter ,Route} from 'react-router-dom'
 import Heder from './ui/heder/heder.js';

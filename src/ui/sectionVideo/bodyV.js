@@ -78,9 +78,7 @@ export default class BodyVideo extends Component{
 		e.stopPropagation();
 	}
 
-	ObnState(newState,prevState){
-		this.setState(prevState = newState)
-	}
+	
 	funSwapMath(s){
 		if (this.state.ClassNameStrel[s][0]){
 			
