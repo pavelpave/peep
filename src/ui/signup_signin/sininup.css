@@ -169,4 +169,11 @@
     color: #fff;
     top: 75%;
     left: 10%;
+    cursor: pointer;
+}
+.vhod{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red   
 }

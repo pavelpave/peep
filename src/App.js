@@ -21,7 +21,7 @@ class App extends Component {
           <Heder inlocalStorag={inlocalStorag}/>
              <Route component={() => <BodyVideo state={state} massAjax={massAjax} />} path='/home'/>
              <Route render={() => <VideoStartPage/>} path='/videoStart' />
-             <Route render={()=> <SignInSignUpForm />} path="/signInUp/" />
+             <Route render={()=> <SignInSignUpForm  state={state}/>} path="/signInUp/" />
           <FooterComponent />
 
           </div>

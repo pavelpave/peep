@@ -13,6 +13,9 @@ let state = {
         _8: [false, podgruz()[0], { history: false }, 4, { deFTop: '735px', Top: '-27px' }],
         _9: [false, podgruz()[0], { izbran: false }, 5, { deFTop: '795px', Top: '30px' }],
         _10: [false, podgruz()[0], { my_post: false }, 5, { deFTop: '735px', Top: '-27px' }]
+    },
+    regForm:{
+        vibor:true
     }
 }
 export default state
