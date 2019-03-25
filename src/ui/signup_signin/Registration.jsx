@@ -18,7 +18,7 @@ export default function Registration (props){
                    <input className="input_pass" type="password" />
                 </div>
                 <Capcha />
-
+                <button className="but_registr">Зарегистрироватся</button>
             </form>
         </div>
     )
