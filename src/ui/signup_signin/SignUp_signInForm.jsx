@@ -30,8 +30,8 @@ class SignInSignUpForm extends Component {
                     <div className="block_registr_siunin">
                         <div className='fon_reg_block'></div>
                         <div className='sinIn_block_reg'>
-                          <span id="1" className="login_in_block" onClick={this.click_loginSinIn}>Вход</span>
-                          <span id="0" className="registration_block"onClick={this.click_loginSinIn}>Регистрация</span>
+                          <span id="1" className="login_in_block" onClick={this.click_loginSinIn} style={{color:this.state.regForm.vibor === false ? '#38569d':'rgb(146, 146, 146)'}}>Вход</span>
+                          <span id="0" className="registration_block"onClick={this.click_loginSinIn} style={{color:this.state.regForm.vibor ? '#38569d':'rgb(146, 146, 146)'}}>Регистрация</span>
                             
                         </div>
                         {/* <Registration  /> */}

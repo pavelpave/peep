@@ -6,10 +6,10 @@ export default function Registration (props){
         
             <form className="form_block_registrations">
                 <div className="inp_log_wrapp">
-                     <input className="input_login" type="text"/>
+                     <input className="input_login" type="text" required/>
                 </div>
                 <div className="inp_pass_wrapp">
-                   <input className="input_pass" type="password" />
+                   <input className="input_pass" type="password" required/>
                 </div>
                 <Capcha />
                 <button className="but_registr">Зарегистрироватся</button>
