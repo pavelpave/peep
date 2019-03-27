@@ -40,10 +40,20 @@ class SignInSignUpForm extends Component {
                     </div>
                     <div className="block_slider" >
                             <div className="one_slide block_slid_hover" >
-                                <div className="one_card_out">hi  </div>
+                                <div className="one_card_out Out_clas"><p>Общяйся и будь <br />
+                                                                        вкурсе всего <br/>
+                                                                        самого интересного
+                                </p></div>
                             </div>
                             <div className="two_slide block_slid_hover" >
-
+                                 <div className="two_card_out Out_clas">
+                                    <h3 className='two_block_h3'>Создавай интересные стикеры <br/>
+                                                                 и стань лучшим <br />
+                                                                 среди наших авторов
+                                                                  </h3>
+                                    <div className='block_two_image'></div>
+                                 
+                                 </div>
                             </div>
                             <div className="three_slide block_slid_hover" >
 

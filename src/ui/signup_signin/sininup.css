@@ -291,7 +291,7 @@
     grid-gap: 10px;
     transform-style: preserve-3d;
     transform-origin: center;
-    transform: perspective(400px);                   
+    transform: perspective(600px);                   
 }
 .one_slide{
     position: relative;
@@ -306,8 +306,9 @@
 }
 .two_slide{
     position: relative;
-
+    z-index: 2;
     grid-area: two;
+    transition: 1s;
     /* left: 74%; */
     /* top: 13%; */ 
     background: url('./img/Bleach-Wallpapers-anime-debate-35241746-1024-768.jpg');
@@ -368,22 +369,71 @@
 /* .block_slid_hover:not(.block_slid_hover:hover){
     transform: scale(0.5);
 } */
-.one_card_out{
+.block_slid_hover{
+    border-radius: 7px
+}
+.Out_clas{
     opacity: 0;
 }
 .one_slide:hover{
     transition: 1s;
     transform: rotateY(180deg);
 }
+.two_slide:hover{
+    transition: 1s;
+    transform: rotateX(180deg);
+}
 .one_slide:hover .one_card_out{
     opacity: 1;
-    position: relative;
+    position: absolute;
     width: 100%;
-    color: red;
+    color: #1b1b28;
     height: 100%;
     font-size: 20px;
     z-index: -10;
-    background: rgb(71, 69, 69);
-    transform: scale(1);
+    background: url('./img/jjjjj.jpeg');
+    background-size: cover;
+    -webkit-transform: scale(1);
+    transform: rotateY(180deg);
+    -webkit-transition: 1s;
     transition: 1s;
+}
+.one_card_out p{
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+}
+.two_slide:hover .two_card_out{
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    color:#38569d;
+    height: 100%;
+    font-size: 20px;
+   background:#fff;
+    z-index: -10;  
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 1s;
+    transition: 1s;
+    
+}
+.two_block_h3{
+    position: relative;
+    /* text-align: center; */
+    left: 4%;
+    top: -10%;
+}
+.block_two_image{
+    background-size: cover;
+    background: url('./img/catgif.gif');
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -95%;
+    z-index: -1;
+    border-radius: 12px;
+}
+.two_slide:hover .two_card_out:hover{
+      transform: rotateX(180deg);
 }
