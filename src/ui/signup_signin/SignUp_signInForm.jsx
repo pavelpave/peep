@@ -2,6 +2,7 @@ import React , {Component} from 'react'
 import Registration from './Registration'
 import SignIn from './SignIn'
 import './sininup.css'
+// import i from './img/фон1.png'
 class SignInSignUpForm extends Component {
     constructor(porps){
         super(porps)
@@ -36,6 +37,26 @@ class SignInSignUpForm extends Component {
                         </div>
                         {/* <Registration  /> */}
                         {this.state.regForm.vibor ? <Registration/> : <SignIn/>}
+                    </div>
+                    <div className="block_slider" >
+                            <div className="one_slide block_slid_hover" >
+                                <div className="one_card_out">hi  </div>
+                            </div>
+                            <div className="two_slide block_slid_hover" >
+
+                            </div>
+                            <div className="three_slide block_slid_hover" >
+
+                            </div>
+                            <div className="foor_slide block_slid_hover" >
+
+                            </div>
+                            <div className="six_slide block_slid_hover" >
+
+                            </div>
+                            <div className="seven_slide block_slid_hover" >
+
+                            </div>
                     </div>
                 </div>
             </div>

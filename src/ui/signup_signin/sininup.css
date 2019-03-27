@@ -273,3 +273,117 @@
   .checkbox:focus + label:before {
     box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(17, 0, 255, 0.7);
   }
+  /* //////////slider */
+
+.block_slider{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /* background: red; */
+    top: 1%;
+    left: 49%;
+    display: grid;
+    grid-template-columns: 29% 33% 33%;
+    grid-template-rows: 29% 44% 20%;
+    grid-template-areas: "one two two"
+ "foor six six"
+ "foor seven thee ";
+    grid-gap: 10px;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: perspective(400px);                   
+}
+.one_slide{
+    position: relative;
+    transition: 1s;
+    grid-area: one;
+    /* left: 31%; */
+    /* top: 39%; */
+    z-index: 2;
+    background: url('./img/201102331491.jpg');
+    background-size: cover;
+    border: 3px solid #38569d;
+}
+.two_slide{
+    position: relative;
+
+    grid-area: two;
+    /* left: 74%; */
+    /* top: 13%; */ 
+    background: url('./img/Bleach-Wallpapers-anime-debate-35241746-1024-768.jpg');
+    background-size: cover;
+    border: 3px solid #38569d;
+}
+.three_slide{
+    position: relative;
+
+    grid-area: thee;
+    /* left: 5%; */
+    background: url('./img/akamevsesdes.jpg');
+    /* top: -63%; */
+    background-size: cover;
+    border: 3px solid #38569d;
+}
+.foor_slide{
+    position: relative;
+
+    grid-area: foor;
+    /* left: 5%; */
+    /* top: -62%; */
+    background: url('./img/devushka_kryilya_perya_volosyi_golubyie.jpg');
+    background-size: cover;
+    border: 3px solid #38569d;   
+}
+.six_slide{
+    position: relative;
+
+    grid-area: six;
+    /* left: 74%; */
+    /* top: -93%; */
+    background: url('./img/akamevsesdes.jpg');
+    background-size: cover;
+    border: 3px solid #38569d;     
+}
+.seven_slide{
+    position: relative;
+
+    grid-area: seven;
+    /* left: 31%; */
+    /* top: -135%; */
+    background: url('./img/anime_tjomnie_oboi_4.jpg');
+    background-size: cover;
+    border: 3px solid #38569d;  
+}
+/* .block_slid_hover:hover{
+    transition: 1s;
+    grid-template-columns: 27% 43% 31%;
+    grid-template-rows: 33% 57% 26%;
+    grid-template-areas: "one two two"
+                            "foor foor six"
+                            "six six six";
+               
+    border:3px solid rgb(163, 108, 214);
+    z-index: 100;
+} */
+/* .block_slid_hover:not(.block_slid_hover:hover){
+    transform: scale(0.5);
+} */
+.one_card_out{
+    opacity: 0;
+}
+.one_slide:hover{
+    transition: 1s;
+    transform: rotateY(180deg);
+}
+.one_slide:hover .one_card_out{
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    color: red;
+    height: 100%;
+    font-size: 20px;
+    z-index: -10;
+    background: rgb(71, 69, 69);
+    transform: scale(1);
+    transition: 1s;
+}
