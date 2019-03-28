@@ -437,3 +437,28 @@
 .two_slide:hover .two_card_out:hover{
       transform: rotateX(180deg);
 }
+.two_block_slid_ul{
+    position: absolute;
+    width: 90%;
+    top: 54%;
+    height: 33%;
+    /* background: red; */
+}
+.two_block_slid_ul li{
+    display: inline-flex;
+    position: relative;
+    width: 12%;
+    height: 86%;
+    /* background: blue; */
+    border-radius: 195px;
+    margin: 10px;
+    overflow: hidden;
+    top: -8px;
+    border:  1px solid black;
+}
+.two_block_slid_ul li a img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: blue
+}

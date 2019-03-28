@@ -1,6 +1,8 @@
 import React , {Component} from 'react'
 import Registration from './Registration'
 import SignIn from './SignIn'
+import agiff from './img/Akame_ga_Kill_18_12155510.jpg'
+
 import './sininup.css'
 // import i from './img/фон1.png'
 class SignInSignUpForm extends Component {
@@ -36,7 +38,7 @@ class SignInSignUpForm extends Component {
                             
                         </div>
                         {/* <Registration  /> */}
-                        {this.state.regForm.vibor ? <Registration/> : <SignIn/>}
+                        {this.state.regForm.vibor ? <Registration/> : <SignIn/>} 
                     </div>
                     <div className="block_slider" >
                             <div className="one_slide block_slid_hover" >
@@ -49,10 +51,17 @@ class SignInSignUpForm extends Component {
                                  <div className="two_card_out Out_clas">
                                     <h3 className='two_block_h3'>Создавай интересные стикеры <br/>
                                                                  и стань лучшим <br />
-                                                                 среди наших авторов
+                                                                 среди наших  авторов
                                                                   </h3>
                                     <div className='block_two_image'></div>
-                                 
+                                    <ul className="two_block_slid_ul">
+                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
+                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
+                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
+                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
+                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
+                                       
+                                    </ul>
                                  </div>
                             </div>
                             <div className="three_slide block_slid_hover" >
