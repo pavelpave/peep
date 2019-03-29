@@ -1,6 +1,7 @@
 import React , {Component} from 'react'
 import Registration from './Registration'
 import SignIn from './SignIn'
+import BlockSlider from './BlockSlider'
 import agiff from './img/Akame_ga_Kill_18_12155510.jpg'
 
 import './sininup.css'
@@ -37,46 +38,9 @@ class SignInSignUpForm extends Component {
                           <span id="0" className="registration_block"onClick={this.click_loginSinIn} style={{color:this.state.regForm.vibor ? '#38569d':'rgb(146, 146, 146)'}}>Регистрация</span>
                             
                         </div>
-                        {/* <Registration  /> */}
                         {this.state.regForm.vibor ? <Registration/> : <SignIn/>} 
                     </div>
-                    <div className="block_slider" >
-                            <div className="one_slide block_slid_hover" >
-                                <div className="one_card_out Out_clas"><p>Общяйся и будь <br />
-                                                                        вкурсе всего <br/>
-                                                                        самого интересного
-                                </p></div>
-                            </div>
-                            <div className="two_slide block_slid_hover" >
-                                 <div className="two_card_out Out_clas">
-                                    <h3 className='two_block_h3'>Создавай интересные стикеры <br/>
-                                                                 и стань лучшим <br />
-                                                                 среди наших  авторов
-                                                                  </h3>
-                                    <div className='block_two_image'></div>
-                                    <ul className="two_block_slid_ul">
-                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
-                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
-                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
-                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
-                                        <li><a href="#"><img src={agiff} alt=""/></a></li>
-                                       
-                                    </ul>
-                                 </div>
-                            </div>
-                            <div className="three_slide block_slid_hover" >
-
-                            </div>
-                            <div className="foor_slide block_slid_hover" >
-
-                            </div>
-                            <div className="six_slide block_slid_hover" >
-
-                            </div>
-                            <div className="seven_slide block_slid_hover" >
-
-                            </div>
-                    </div>
+                    <BlockSlider agiff={agiff}/>
                 </div>
             </div>
         )

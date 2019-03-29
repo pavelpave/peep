@@ -337,7 +337,7 @@
 }
 .six_slide{
     position: relative;
-
+    overflow: hidden;
     grid-area: six;
     /* left: 74%; */
     /* top: -93%; */
@@ -401,7 +401,9 @@
 .one_card_out p{
     position: relative;
     font-size: 18px;
-    text-align: center;
+    color: rgb(65, 50, 133);
+    font-weight: bold;
+    left: 3%;
 }
 .two_slide:hover .two_card_out{
     opacity: 1;
@@ -461,4 +463,24 @@
     width: 100%;
     height: 100%;
     background: blue
+}
+.six_slide::before{
+    content: '';
+    -webkit-transition: 1s;
+    transition: 1s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('./img/model.jpg');
+    background-size: cover;
+    top: -100%;
+    opacity: 0;
+}
+.six_slide:hover::before{
+    
+    top: 0%;
+    opacity: 1;  
+}
+.six_slide :hover .six_card_out{
+
 }
