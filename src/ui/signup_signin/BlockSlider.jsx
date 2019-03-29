@@ -27,7 +27,7 @@ export default function BlockSlider(props){
                     <li><a href="#"><img src={props.agiff} alt="ссылка на автора"/></a></li>
                    
                 </ul>
-             </div>
+             </div> 
         </div>
         <div className="three_slide block_slid_hover" >
             <div >
@@ -39,7 +39,11 @@ export default function BlockSlider(props){
         </div>
         <div className="six_slide block_slid_hover" >
             <div className='six_card_out'>
-
+                <a href='#' className='onl_translate'>Смотрите онлайн трансляции</a>
+                <br/>
+                <a href="#" className='besed'>Или ведите анонимные <br/> беседы в группах</a>
+                <br/>
+                <a href="#" className='vibor'>Выбор за вами</a>
             </div>
         </div>
         <div className="seven_slide block_slid_hover" >
