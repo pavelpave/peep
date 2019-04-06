@@ -31,11 +31,14 @@ export default function BlockSlider(props){
         </div>
         <div className="three_slide block_slid_hover" >
             <div >
-
+                
             </div>
         </div>
         <div className="foor_slide block_slid_hover" >
-            
+            <div className="block_kub"> 
+                 <div>hi pipl</div>  
+                    
+            </div>
         </div>
         <div className="six_slide block_slid_hover" >
             <div className='six_card_out'>
