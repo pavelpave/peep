@@ -15,6 +15,9 @@ export default function BlockSlider(props){
         </div>
         <div className="two_slide block_slid_hover" >
              <div className="stichAnimation"></div>
+             <div className="twoTExt">
+                Лучшая группа художников это мы
+             </div>
              <div className="two_card_out Out_clas">
                 <h3 className='two_block_h3'>Создавай интересные стикеры <br/>
                                              и стань лучшим <br />
@@ -53,7 +56,7 @@ export default function BlockSlider(props){
             </div>
         </div>
         <div className="seven_slide block_slid_hover" >
-
+           <a href='#'><p>Служба <br/>потдержки</p></a> 
         </div>
 </div>
     )

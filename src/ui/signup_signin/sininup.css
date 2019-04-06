@@ -320,7 +320,7 @@
 
     grid-area: thee;
     /* left: 5%; */
-    background: url('./img/akamevsesdes.jpg');
+    background: url('./img/fon_last.jpeg');
     /* top: -63%; */
     background-size: cover;
     border: 3px solid #38569d;
@@ -341,34 +341,30 @@
     grid-area: six;
     /* left: 74%; */
     /* top: -93%; */
-    background: url('./img/akamevsesdes.jpg');
+    background: url('./img/fjn3.png');
     background-size: cover;
     border: 3px solid #38569d;     
 }
 .seven_slide{
     position: relative;
-
     grid-area: seven;
     /* left: 31%; */
     /* top: -135%; */
-    background: url('./img/anime_tjomnie_oboi_4.jpg');
+    background: url('./img/support.png');
     background-size: cover;
     border: 3px solid #38569d;  
 }
-/* .block_slid_hover:hover{
-    transition: 1s;
-    grid-template-columns: 27% 43% 31%;
-    grid-template-rows: 33% 57% 26%;
-    grid-template-areas: "one two two"
-                            "foor foor six"
-                            "six six six";
-               
-    border:3px solid rgb(163, 108, 214);
-    z-index: 100;
-} */
-/* .block_slid_hover:not(.block_slid_hover:hover){
-    transform: scale(0.5);
-} */
+.seven_slide a {
+    position: absolute;
+    width: 100%;
+    text-decoration: none;
+    font-size: 19px;
+    height: 100%;
+    font-weight: bold;
+    line-height: 19px;
+    color: #6a6a7d;
+    left: 4%;
+}
 .block_slid_hover{
     border-radius: 7px
 }
@@ -385,6 +381,10 @@
 .two_slide:hover{
     transition: 1s;
     transform: rotateX(180deg);
+}
+
+.two_slide:hover .twoTExt{
+    display: none
 }
 .two_slide:hover .stichAnimation{
     display: none;
@@ -630,7 +630,7 @@
     height: 10%;
     font-size: 23px;
     font-weight: bold;
-    color: #fff;
+    color: #d6cbdc;
     left: 7%;
     top: 30%;
 }
@@ -644,4 +644,13 @@
     height: 100%;
     background-size: cover;
     top: 4%;
+}
+.twoTExt{
+    position: absolute;
+    font-size: 4vh;
+    position: absolute;
+    font-size: 4vh;
+    color: #d6cbdc;
+    font-weight: bold
+
 }
